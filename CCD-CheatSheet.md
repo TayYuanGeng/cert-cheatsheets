@@ -385,6 +385,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> dlllist -p XXXX
 #### pstree Plugin
 
 To determine the parent-child process like which process is the parent process and which process is the child process,
+Note: svchost.exe process should ONLY run under the parent process services.exe
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> pstree
