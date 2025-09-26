@@ -200,14 +200,15 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Windows version and installation date|`SOFTWARE\Microsoft\Windows NT\CurrentVersion`|Registry Explorer/RegRipper|
 |Computer Name|`SYSTEM\ControlSet001\Control\ComputerName\ComputerName`|Registry Explorer/RegRipper|
 |Timezone|`SYSTEM\ControlSet001\Control\TimeZoneInformation`|Registry Explorer/RegRipper|
+|Last Shutdown Time|`SYSTEM\ControlSet001\Control\Windows`|Registry Explorer/RegRipper|
 
 #### Network Information
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |Identify physical cards|`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards`|Registry Explorer/RegRipper|
-|Identify interface configuration|`SYSTEM\ControlSet001\Services\Tcpip\Parameters\Interfaces`|Registry Explorer/RegRipper|
-|Connections History|`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx`|WifiHistoryView|
+|Identify interface configuration (IP address, DHCP Server, DHCP Name Server)|`SYSTEM\ControlSet001\Services\Tcpip\Parameters\Interfaces`|Registry Explorer/RegRipper|
+|Connections History (Interfaces lastWrite, lastConnected, dateCreated, DefaultGatewayMac, Type) |`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx` `Microsoft-Windows-Sysmon%4Operational.evtx`|WifiHistoryView/Registry Explorer/Event Log Explorer|
 
 #### Users Information
 
@@ -234,22 +235,23 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|Failed/Succesful object access|Securit.evtx|Event Log Explorer|
+|File Creation|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
+|Failed/Succesful object access|Security.evtx|Event Log Explorer|
 ||4656 -> User tried to access an object||
 ||4660 -> object was deleted||
 ||4663 -> User accessed the object successfully||
 ||4658 -> the user closed the opened object (file)||
-|Recently used files/folders|NTUSER.dat|Registry Explorer/RegRipper|
+|Recently used files/folders (may contain files/folders and websites/URLs visited)|NTUSER.dat|Registry Explorer/RegRipper|
 ||`Software\Microsoft\Office\15.0<Office application>\File MRU`||
 ||`Software\Microsoft\Office\15.0<Office application>\Place MRU`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU\*`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths`||
-|Accessed folders|ShellBags|ShellBags Explorer|
-||NTUSER.dat||
-||USRCLASS.dat||
-|Accessed files, its path, metadata, timestamps, drive letter|LNK files|LECmd|
+|Accessed Local/Network folders|ShellBags|ShellBags Explorer|
+||C:\Users\<YourUsername>\NTUSER.dat||
+||C:\Users\<YourUsername>\AppData\Local\Microsoft\Windows\USRCLASS.dat||
+|Accessed Local/Network files, its path, metadata, timestamps, drive letter|LNK files|LECmd|
 ||`C:\Users<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
 ||`C:\Users<User>\Desktop`||
 ||`C:\Users<User>\AppData\Roaming\Microsoft\Office\Recent\`||
@@ -266,12 +268,12 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Serial Number, First connection time, last connection time, last removal time|`SYSTEM\ControlSet001\USBSTOR`|Registry Explorer/RegRipper|
 |USB Label|`SYSTEM\ControlSet001\Enum\SWD\WPDBUSENUM`|Registry Explorer/RegRipper|
 |GUID, TYPE, serial number|`SYSTEM\ControlSet001\Control\DeviceClasses`|Registry Explorer/RegRipper|
-|VolumeGUID, Volume letter, serial number|`SYSTEM\MountedDevices` `SOFTWARE\Microsoft\Windows Portable Devices\Devices` `SOFTWARE\Microsoft\Windows Search\VolumeInfoCache`|Registry Explorer/RegRipper|
+|VolumeGUID, Volume letter, serial number|`SYSTEM\MountedDevices` (Can also be used to find out USB is mounted to which drive) `SOFTWARE\Microsoft\Windows Portable Devices\Devices` `SOFTWARE\Microsoft\Windows Search\VolumeInfoCache`|Registry Explorer/RegRipper|
 |Serial number, first connection time|`setupapi.dev.log`|notepad++|
 |Serial number, connections times, drive letter|**SYSTEM.evtx**: 20001 -> a new device is installed|Event Log Explorer|
 ||**Security.evtx**: 6416 -> new externel device recognized||
 ||Microsoft-Windows-Ntfs%4Operational.evtx||
-|Automation|Registry|USBDeviceForenics, USBDetective|
+|Automation|Registry|USBDeviceForenics (When selecting the input folder, make sure it is C:\Windows\System32\config for Registry-WPDBUSENUM OR Registry-USBSTOR etc.. tabs to be populated. When selecting the input folder, make sure it is C:\Windows\System32\winevt\logs for Win 10 Event Log tab to be populated), USBDetective|
 ||Event Logs||
 ||setupapi.dev.log||
 
@@ -291,8 +293,8 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`||
 ||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`||
 |Frequently run programs, last time, number of execution|UserAssist|UserAssist by Didier Steven|
-||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist`||
-|Run of older applications on newer system|`SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache\AppCompatCache`|ShimCache Parser|
+||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist` (Registry keys ending with EA is executable files and 9F is shortcuts. Clicking onto either of those keys will show the user frequency of running various executables/shortcuts, last run time etc. Focus Time values are in milliseconds, this time is determined based on how long the user is active on that process)||
+|Run of older applications on newer system|`SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache\AppCompatCache` (Only able to view applications details with compatibility mode (properties) turned on.)|ShimCache Parser|
 |Files path, md5 & sha1 hash|`Amcache.hve`|Amcache Parser|
 |Background applications|`BAM & DAM`|Registry Explorer/RegRipper|
 ||`SYSTEM\ControlSet001\Services\bam\State\UserSettings`||
