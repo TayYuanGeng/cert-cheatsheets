@@ -386,6 +386,17 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> dlllist -p XXXX
 
 To determine the parent-child process like which process is the parent process and which process is the child process,
 
+pstree plugin to discover anomalies:
+<ol>
+  <li>Run the pstree plugin to check processes relationships and look for:Processes that have cmd or PowerShell as child processes.</li>
+  <li>System processes (e.g., services.exe) that have a client-side application as their parent (e.g., explorer.exe).</li>
+  <li>Client-side application processes (e.g., calc.exe) which have a system process as their parent (e.g., service.exe)</li>
+  <li>Run pstree with -v option and look for: System applications that are running from a location other than C:\Windows\System32\, such as the 'Desktop' and 'Downloads' folders.</li>
+  <li>Client-side applications that are running from C:\Windows, or weird folder names.</li>
+  <li>Unusual long commands (e.g., a three lines command, usually encoded command.). Also, commands with abnormal arguments such as IP address, port number, or URL.</li>
+  <li>A mismatch between the values of the "path" and "audit" fields when running pstree with -v option.</li>
+</ol>
+
 Examples of malicious processes:
 <ol>
   <li>A web browser (e.g., chrome.exe) spawning a suspicious child process (e.g., mshta.exe)</li>
