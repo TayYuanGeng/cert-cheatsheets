@@ -208,7 +208,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |:---:|:---:|:---:|
 |Identify physical cards|`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards`|Registry Explorer/RegRipper|
 |Identify interface configuration (IP address, DHCP Server, DHCP Name Server)|`SYSTEM\ControlSet001\Services\Tcpip\Parameters\Interfaces`|Registry Explorer/RegRipper|
-|Connections History (Interfaces lastWrite, lastConnected, dateCreated, DefaultGatewayMac, Type) |`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx` `Microsoft-Windows-Sysmon%4Operational.evtx`|WifiHistoryView/Registry Explorer/Event Log Explorer|
+|Connections History (Interfaces lastWrite, lastConnected, dateCreated, DefaultGatewayMac, Type) |`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx` `Microsoft-Windows-Sysmon%4Operational.evtx` (Useful to find C2 channel IP address)|WifiHistoryView/Registry Explorer/Event Log Explorer|
 
 #### Users Information
 
@@ -228,14 +228,14 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|File name, path, timestamps, actions (i.e rename)|`$MFT, $LogFile, $UsnJrnl:$J`|NTFS Log Tracker|
+|File name, path, timestamps, actions (i.e rename)|`$MFT, $LogFile, $UsnJrnl:$J` ($J can sometimes be found in $Extend directory)|NTFS Log Tracker|
 |Information about deleted files|`$I30`|INDXRipper|
 
 #### File Activities - Who did it?
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|File Creation|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
+|File Creation/Command Execution (e.g. whoami, ping)|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
 ||4656 -> User tried to access an object||
 ||4660 -> object was deleted||
@@ -249,9 +249,9 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths`||
 |Accessed Local/Network folders|ShellBags|ShellBags Explorer|
-||C:\Users\<YourUsername>\NTUSER.dat||
-||C:\Users\<YourUsername>\AppData\Local\Microsoft\Windows\USRCLASS.dat||
-|Accessed Local/Network files, its path, metadata, timestamps, drive letter|LNK files|LECmd|
+||NTUSER.dat||
+||USRCLASS.dat||
+|Accessed Local/Network files, Startup folder, its path, metadata, timestamps, drive letter|LNK files|LECmd|
 ||`C:\Users<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
 ||`C:\Users<User>\Desktop`||
 ||`C:\Users<User>\AppData\Roaming\Microsoft\Office\Recent\`||
@@ -286,7 +286,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||**SYSTEM.evtx**: 7034 -> Service crashed||
 ||7035 -> start/stop requests||
 ||7036 -> service stoppped/started||
-|Autorun applications|`SOFTWARE\Microsoft\Windows\CurrentVersion\Run`|Registry Explorer/RegRipper|
+|Autorun applications/Registry-based persistence|`SOFTWARE\Microsoft\Windows\CurrentVersion\Run`|Registry Explorer/RegRipper|
 ||`SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`||
 ||`SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run`||
 ||`SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\RunOnce`||
@@ -306,6 +306,14 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tasks`||
 ||`Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tree`||
 ||`Microsoft-Windows-TaskScheduler%4Operational.evtx`||
+
+#### Execution Activities
+
+|**What To Look For**|**Where To Find It**|**Investigation Tool**|
+|:---:|:---:|:---:|
+|Client-side Applications|`SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall` `SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall` `Software\Microsoft\Windows\CurrentVersion\App Paths`|Registry Explorer/RegRipper|
+||`C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd`|DB Browser for SQLite|
+||`Application.evtx`|Event Log Explorer|
 
 ---
 
