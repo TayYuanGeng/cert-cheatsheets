@@ -237,10 +237,12 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |:---:|:---:|:---:|
 |File Creation/Command Execution (e.g. whoami, ping)|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
+||4104 -> Scriptblock logging (Logs PowerShell script code when being executed even if it is obfuscated)||
 ||4656 -> User tried to access an object||
 ||4660 -> object was deleted||
 ||4663 -> User accessed the object successfully||
 ||4658 -> the user closed the opened object (file)||
+||5140 -> A Network Share Object Was Accessed||
 |Recently used files/folders (may contain files/folders and websites/URLs visited)|NTUSER.dat|Registry Explorer/RegRipper|
 ||`Software\Microsoft\Office\15.0<Office application>\File MRU`||
 ||`Software\Microsoft\Office\15.0<Office application>\Place MRU`||
@@ -251,7 +253,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Accessed Local/Network folders|ShellBags|ShellBags Explorer|
 ||NTUSER.dat||
 ||USRCLASS.dat||
-|Accessed Local/Network files, Startup folder, its path, metadata, timestamps, drive letter|LNK files|LECmd|
+|Accessed Local/Network share files, Startup folder, its path, metadata, timestamps, drive letter|LNK files|LECmd|
 ||`C:\Users<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
 ||`C:\Users<User>\Desktop`||
 ||`C:\Users<User>\AppData\Roaming\Microsoft\Office\Recent\`||
@@ -286,6 +288,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||**SYSTEM.evtx**: 7034 -> Service crashed||
 ||7035 -> start/stop requests||
 ||7036 -> service stoppped/started||
+||7045 -> New service was installed (Can be used to check for malicious services started)||
 |Autorun applications/Registry-based persistence|`SOFTWARE\Microsoft\Windows\CurrentVersion\Run`|Registry Explorer/RegRipper|
 ||`SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`||
 ||`SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run`||
@@ -307,13 +310,20 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tree`||
 ||`Microsoft-Windows-TaskScheduler%4Operational.evtx`||
 
-#### Execution Activities
+#### Applications Installed
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |Client-side Applications|`SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall` `SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall` `Software\Microsoft\Windows\CurrentVersion\App Paths`|Registry Explorer/RegRipper|
 ||`C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd`|DB Browser for SQLite|
 ||`Application.evtx`|Event Log Explorer|
+
+#### Process Activities
+
+|**What To Look For**|**Where To Find It**|**Investigation Tool**|
+|:---:|:---:|:---:|
+|Process Creation|Security.evtx|Event Log Explorer|
+||4688 -> A new process has been created (When process such as powershell, cmd, bin files are executed)||
 
 ---
 
