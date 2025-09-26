@@ -328,7 +328,7 @@ To determine the profile of an image,
 ```bash
 python vol.py -f memory.dmp imageinfo
 ```
-After running this plugin, a list of information related to the system will display, specifically suggested build profile(s), KDB and image data and time. Suggested build profile(s) may not be always accurate and require testing (see below).
+After running this plugin, a list of information related to the system will display, specifically suggested build profile(s), KDBG and image data and time. Suggested build profile(s) may not be always accurate and require testing (see below).
 
 #### kdbgscan Plugin
 
