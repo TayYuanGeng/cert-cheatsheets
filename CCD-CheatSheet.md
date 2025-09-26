@@ -328,6 +328,7 @@ To determine the profile of an image,
 ```bash
 python vol.py -f memory.dmp imageinfo
 ```
+After running this plugin, a list of information related to the system will display, specifically suggested build profile(s), KDB and image data and time. Suggested build profile(s) may not be always accurate and require testing (see below).
 
 #### kdbgscan Plugin
 
@@ -337,13 +338,13 @@ KDBG is known as Kernel Debugger, used for debugging purposes if the system cras
 python vol.py -f memory.dmp imageinfo
 ```
 
-Then identify the profile to be used later in the process, and use the plugin,
+Then identify the profile to be used later in the process, try out each suggested build profile individually using the following command.
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> kdbgscan
 ```
 
-Determine the KdCopyDataBlock offset as we will use it in the next step with any other plugin, *let us say `pslist`*,
+If the output the command for PsActiveProcessHead and PsLoadedModuleList of discovered processes and modules are 0, the wrong profile is used. Make sure that the Version64 and Build string (NtBuildLab) output values reflect each other. Try and error using this plugin (kdbgscan), until both of the said criteria are met, copy down the KdCopyDataBlock offset output as we will use it in the next step with any other plugin, *let us say `pslist`*,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
