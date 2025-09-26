@@ -385,7 +385,16 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> dlllist -p XXXX
 #### pstree Plugin
 
 To determine the parent-child process like which process is the parent process and which process is the child process,
-Note: svchost.exe process should ONLY run under the parent process services.exe
+
+Examples of malicious processes:
+<ol>
+  <li>A web browser (e.g., chrome.exe) spawning a suspicious child process (e.g., mshta.exe)</li>
+  <li>An email client (e.g., outlook.exe) spawning a suspicious child process (e.g., regsvr32.exe)</li>
+  <li>svchost.exe is running under a process other than services.exe</li>
+  <li>A system process (e.g., services.exe) spawning a client-side application process (e.g., calc.exe)</li>
+  <li>Windows explorer process (explorer.exe) spawning system process (e.g., lsass.exe)</li>
+</ol>
+
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> pstree
