@@ -354,7 +354,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
 
 #### pslist Plugin
 
-To determine the process in the memory dump,
+To determine the process (offset, name, PID, PPID, # of threads, # of handles (handles are used to interact with other files/processes/registry keys), Sess (good indicator of who triggered the process, each user has a different session number), Wow64 (indicates whether a process is running as a 32-bit process on a 64-bit operating system), Start, Exit) in the memory dump,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
