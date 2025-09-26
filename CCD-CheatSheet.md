@@ -331,7 +331,7 @@ python vol.py -f memory.dmp imageinfo
 
 #### kdbgscan Plugin
 
-To determine the kdbg signature of an image, first ran the command,
+KDBG is known as Kernel Debugger, used for debugging purposes if the system crashes. To determine the kdbg signature of an image, first ran the command,
 
 ```bash
 python vol.py -f memory.dmp imageinfo
