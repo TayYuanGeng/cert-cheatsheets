@@ -531,11 +531,13 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> ldrmodules
 
 #### netscan Plugin
 
-To find the network-relevant information,
+To find the network-relevant connection information,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> netscan
 ```
+
+The above output will be similar to netstat command ran on live machine. Note that for UDP connections, the Foreign Address and State will be defaulted (ip addr is \*:\* and state is blanked).
 
 #### connscan Plugin
 
