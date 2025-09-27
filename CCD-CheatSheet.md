@@ -571,6 +571,25 @@ To detect the persistence techniques in Registry key, utilize the following plug
 python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <registry-key>
 ```
 
+plugin output:
+<ul>
+  <li><b>1. Hive path:</b> hive path determine if the configuration stored is specific to a particular user or applies to the entire machine.</li>
+  <ul>
+    <li>Hives in "\SystemRoot" indicate that the configuration applies to all users.</li>
+    <li>Hives in the current user's profile directory (e.g., "C:\Users\username\NTUSER.DAT") indicate that the configuration only applies to that user.</li>
+  </ul>
+  <li><b>2. Key name and type:</b> "(S)" means that the key is a stable registry key permanently stored on the hard drive. If the key is marked as "(V)," it is a temporary/volatile registry key that exists only in memory. Volatile keys store system settings that frequently change, while stable keys are used for configuration data that needs to persist between system restarts. It makes sense that attackers will be interested in stable keys as their objective is to achieve persistence.</li>
+  <li><b>3. Last updated:</b> the date and time when the key was last modified. This information can help establish a timeline of events during the incident.</li>
+  <li><b>4. Subkeys:</b> contain a list of subkeys that exist under the inspected (parent) key, if any, along with their type, stable (S) or volatile (V).</li>
+  <li>The "Values" section displays key content/values. It's broken down into:</li>
+  <ul>
+    <li><b>5. Value name:</b> usually the application name.</li>
+    <li><b>6. Value data:</b> the key content. Usually, an executable or a command line.</li>
+    <li><b>7. Value type:</b> Stable or volatile, similar to registry keys.</li>
+    <li><b>8. Value data type:</b> the data type. For a complete list of possible types, please check out Registry value types by Microsoft. Knowing the data type will help you figure out the proper way to decode it.</li>
+  </ul>
+</ul>
+
 #### winesap Plugin
 
 To automate the inspecting persistence-related registry keys, utilize the following plugin,
