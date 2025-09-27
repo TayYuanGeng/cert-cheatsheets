@@ -283,7 +283,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|Windows Services executable, date added|`SYSTEM\CurrentControlSet\Services`|Registry Explorer/RegRipper|
+|Windows Services executable, [start type](https://learn.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-services-registry-tree), date added|`SYSTEM\CurrentControlSet\Services`|Registry Explorer/RegRipper|
 |Service installation time, Service crashed, stop/start service event|**Security.evtx**: 4697 -> service gets installed|Event Log Explorer|
 ||**SYSTEM.evtx**: 7034 -> Service crashed||
 ||7035 -> start/stop requests||
