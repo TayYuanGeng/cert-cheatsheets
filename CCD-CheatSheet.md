@@ -537,7 +537,13 @@ To find the network-relevant connection information,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> netscan
 ```
 
-The above output will be similar to netstat command ran on live machine. Note that for UDP connections, the Foreign Address and State will be defaulted (ip addr is \*:\* and state is blanked).
+The above output will be similar to netstat command ran on live machine. Note that for UDP connections, the Foreign Address and State will be defaulted (ip addr is \*:\* and state is blanked) as it is a connectionless protocol.
+
+What to look out for in the output:
+<ol>
+  <li>Suspicious processes for an application not installed on the subject system. Use psinfo to further investigate the suspected process. E.g. msteams is not installed in the system BUT appeared in the output. Use psinfo to check on the pid of teams.exe</li>
+</ol>
+Note: It is normal to see PID with -1 as the plugin could not obtain the process ID, process name, and creation time. This is a common occurrence because sometimes the memory parts that contain that information may get overwritten by other applications or functions.
 
 #### connscan Plugin
 
