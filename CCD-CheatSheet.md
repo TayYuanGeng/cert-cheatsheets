@@ -467,6 +467,8 @@ Popular SIDs:
   <li>S-1-5-21-domain-1001: User account in the domain</li>
 </ol>
 
+For more info on account SIDs, click [here](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers#well-known-sids)
+
 #### handles Plugin
 
 To find open handles in a process,
