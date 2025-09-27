@@ -437,7 +437,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> psxview
 
 #### psinfo Plugin
 
-To find the detailed process information,
+To find the detailed process information, especially hidden processes,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> psinfo -o <process_offset>
