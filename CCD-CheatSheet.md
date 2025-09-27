@@ -453,6 +453,20 @@ To find the process privileges and identify the SIDs of the users,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> getsids -o <process_offset>
 ```
 
+Popular SIDs:
+<ol>
+  <li>S-1-5-32-544: Administrators group</li>
+  <li>S-1-5-32-545: Users Group</li>
+  <li>S-1-5-32-546: Guests group</li>
+  <li>S-1-1-0: Everyone group</li>
+  <li>S-1-5-21-domain-512: Domain Admins group for the domain</li>
+  <li>S-1-5-18: Local System account</li>
+  <li>S-1-5-19: Local Service account</li>
+  <li>S-1-5-20: Network Service account</li>
+  <li>S-1-5-21-domain-500: Administrator account for the local machine</li>
+  <li>S-1-5-21-domain-1001: User account in the domain</li>
+</ol>
+
 #### handles Plugin
 
 To find open handles in a process,
