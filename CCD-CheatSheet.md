@@ -429,7 +429,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> pstree -v
 
 #### psxview Plugin
 
-To find the hidden processes (cannot be found in pslist) that are concealed from standard processes,
+To find the hidden processes (cannot be found in pslist, BUT not all hidden processes are malicious) that are concealed from standard processes,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> psxview
