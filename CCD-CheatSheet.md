@@ -443,6 +443,12 @@ To find the detailed process information, especially hidden processes,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> psinfo -o <process_offset>
 ```
 
+OR
+
+```bash
+python vol.py -f memory.dmp --profile=<profile> -g <offset> psinfo -p <pid>
+```
+
 From the above output, it contains the PID, Parent Process & PPID, Creation Time, Virtual Address Descriptor (VAD) (Tracks allocated memory space) and Process Environment Block (PEB) (Tracks command line arg, env var etc.). The VAD and PEB information should match each other, otherwise it increases the odds of being a malicious process. Refer to [this](https://cysinfo.com/detecting-malicious-processes-psinfo-volatility-plugin/) for more use cases.
 
 #### getsids plugin
@@ -451,6 +457,12 @@ To find the process privileges and identify the SIDs of the users,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> getsids -o <process_offset>
+```
+
+OR
+
+```bash
+python vol.py -f memory.dmp --profile=<profile> -g <offset> getsids -p <pid>
 ```
 
 Popular SIDs:
