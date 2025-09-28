@@ -433,6 +433,7 @@ Examples of malicious processes:
   <li>A web browser (e.g., chrome.exe) spawning a suspicious child process (e.g., mshta.exe)</li>
   <li>An email client (e.g., outlook.exe) spawning a suspicious child process (e.g., regsvr32.exe)</li>
   <li>svchost.exe is running under a process other than services.exe</li>
+  <ul>svchost.exe will ALWAYS run with a -k parameter because it is required for the service control manager to track and manage services (Use -v for pstree plugin to see the command executed to trigger the process)</ul>
   <li>A system process (e.g., services.exe) spawning a client-side application process (e.g., calc.exe)</li>
   <li>Windows explorer process (explorer.exe) spawning system process (e.g., lsass.exe)</li>
 </ol>
