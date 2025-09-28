@@ -694,6 +694,7 @@ To extract log files (.evtx) etc. use this plugin,
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> dumpfiles --regex .evtx$ --ignore-case --dump-dir=/<output-directory>
 ```
+There will be alot of .vacb and .dat files, use evtxECmd OR evtxdump.pl to format it to csv/xml and can be viewed using timeline explorer.
 
 ### Kernel Memory and Objects
 
