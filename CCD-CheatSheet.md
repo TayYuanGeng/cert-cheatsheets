@@ -725,7 +725,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> malfind
 To locate any sequence of bytes, or determine the malicious nature of a process with PID XXXX, provided we have included the rule (yara rule file) we created, 
 
 ```bash
-volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar -P XXXX
+volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar -p XXXX
 ```
 
 ---
