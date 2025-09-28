@@ -687,7 +687,7 @@ To extract the range of pages described by a VAD node,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> vaddump --dump-dir=/<output-directory>
 ```
 
-### dumpfiles Plugin
+#### dumpfiles Plugin
 
 To extract log files (.evtx) etc. use this plugin,
 
