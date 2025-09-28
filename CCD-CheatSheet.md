@@ -229,6 +229,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |File name, path, timestamps, actions (i.e rename)|`$MFT, $LogFile, $UsnJrnl:$J` ($J can sometimes be found in $Extend directory)|NTFS Log Tracker|
+|Original File name before rename|`Microsoft-Windows-Sysmon%4Operational.evtx` OriginalFileName value|Event Log Explorer|
 |Information about deleted files|`$I30`|INDXRipper|
 
 #### File Activities - Who did it?
