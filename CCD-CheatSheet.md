@@ -623,6 +623,41 @@ To extract MFT entries in memory, utilize the following plugin,
 volatility -f <memory_dump> --profile=<profile> -g <offset> mftparser
 ```
 
+From the above output:
+<ol>
+  <li>MFT Record Header</li>
+  <ol>
+    <li><b>Attribute</b> will tell you whether it is a file or directory and whether it is in use (AKA NOT deleted)</li>
+    <li><b>Record Number</b> is the sequence number of the record within the Master File Table.</li>
+    <li><b>Link count</b> is the number of hard links to the file system file. Hard links are multiple file names that point to the same physical file on a disk. This attribute can be useful in tracking down malicious files that may have been created with a different name but still point to the same underlying content.</li>
+  </ol>
+  <li>STANDARD_INFORMATION</li>
+  <ul>
+    <li>Contains the timestamps when the file was created, last modified, last accessed, and last time the MFT record changed and the file's type.</li>
+    <li>For file type, <b>Read-only</b>, <b>Hidden</b>, or <b>SYSTEM</b> are suspicious and often given by attackers to the malicious files they drop on the machine to evade detection and bypass security measures. Attackers may give their file the <b>System</b> attribute to protect it from being deleted.</li>
+    <li>Here is a list of entries you may find under the <b>type</b> section:</li>
+    <ol>
+      <li><b>READ ONLY</b>: The file can only be read and not modified.</li>
+      <li><b>HIDDEN</b>: The file is hidden from normal directory listings.</li>
+      <li><b>SYSTEM</b>: The file is a part of the operating system and is required to function properly.</li>
+      <li><b>ARCHIVE</b>: The file has been modified since the last backup.</li>
+      <li><b>DEVICE</b>: The file is a device driver.</li>
+      <li><b>NORMAL</b>: The file is a regular file and has no special attributes.</li>
+      <li><b>TEMPORARY</b>: The file is temporary and may be deleted by the system when no longer needed.</li>
+      <li><b>SPARSE FILE</b>: The file has been allocated in a way that optimizes the use of disk space.</li>
+      <li><b>REPARSE POINT</b>: The file is a symbolic link or junction point.</li>
+      <li><b>COMPRESSED</b>: The file has been compressed to save disk space.</li>
+      <li><b>OFFLINE</b>: The file is not currently available on the system and may need to be retrieved from an external source.</li>
+      <li><b>NOT CONTENT INDEXED</b>: The Windows Search service does not index the file.</li>
+      <li><b>ENCRYPTED</b>: The file has been encrypted to protect its contents.</li>
+    </ol>
+  </ul>
+  <li>FILE_NAME</li>
+  <ul>
+    <li>Contains the file name and timestamps. The $FN attribute is often used to identify files and directories and their properties.</li>
+  </ul>
+</ol>
+
 ### Process Memory
 
 #### procdump Plugin
