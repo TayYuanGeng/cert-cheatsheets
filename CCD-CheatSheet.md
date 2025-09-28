@@ -627,7 +627,7 @@ From the above output:
 <ol>
   <li>MFT Record Header</li>
   <ol>
-    <li><b>Attribute</b> will tell you whether it is a file or directory and whether it is in use (AKA NOT deleted)</li>
+    <li><b>Attribute</b> will tell you whether it is a file or directory and whether it is <b>in use</b> (AKA NOT deleted)</li>
     <li><b>Record Number</b> is the sequence number of the record within the Master File Table.</li>
     <li><b>Link count</b> is the number of hard links to the file system file. Hard links are multiple file names that point to the same physical file on a disk. This attribute can be useful in tracking down malicious files that may have been created with a different name but still point to the same underlying content.</li>
   </ol>
