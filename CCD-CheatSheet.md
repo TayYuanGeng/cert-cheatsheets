@@ -421,7 +421,7 @@ pstree plugin to discover anomalies:
 <ol>
   <li>Run the pstree plugin to check processes relationships and look for:Processes that have cmd or PowerShell as child processes.</li>
   <li>System processes (e.g., services.exe) that have a client-side application as their parent (e.g., explorer.exe).</li>
-  <li>Client-side application processes (e.g., calc.exe) which have a system process as their parent (e.g., service.exe)</li>
+  <li>Client-side application processes (e.g., calc.exe) which have a system process as their parent (e.g., services.exe)</li>
   <li>Run pstree with -v option and look for: System applications that are running from a location other than C:\Windows\System32\, such as the 'Desktop' and 'Downloads' folders.</li>
   <li>Client-side applications that are running from C:\Windows, or weird folder names.</li>
   <li>Unusual long commands (e.g., a three lines command, usually encoded command.). Also, commands with abnormal arguments such as IP address, port number, or URL.</li>
