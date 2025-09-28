@@ -414,6 +414,13 @@ pstree plugin to discover anomalies:
   <li>Client-side applications that are running from C:\Windows, or weird folder names.</li>
   <li>Unusual long commands (e.g., a three lines command, usually encoded command.). Also, commands with abnormal arguments such as IP address, port number, or URL.</li>
   <li>A mismatch between the values of the "path" and "audit" fields when running pstree with -v option.</li>
+  <li>Multiple same processes that is supposed to be a singleton process. Example of singleton process includes:</li>
+  <ul>
+    <li>wininit.exe</li>
+    <li>lsass.exe</li>
+    <li>services.exe</li>
+    <li>spoolsv.exe</li>
+  </ul>
 </ol>
 
 Examples of malicious processes:
