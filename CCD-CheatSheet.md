@@ -466,6 +466,7 @@ To find the detailed process information, especially hidden processes,
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> psinfo -o <process_offset>
 ```
+Note that the process offset value is based on psxview offset value.
 
 From the above output, it contains the PID, Parent Process & PPID, Creation Time, Virtual Address Descriptor (VAD) (Tracks allocated memory space) and Process Environment Block (PEB) (Tracks command line arg, env var etc.). The VAD and PEB information should match each other, otherwise it increases the odds of being a malicious process. Refer to [this](https://cysinfo.com/detecting-malicious-processes-psinfo-volatility-plugin/) for more use cases.
 
