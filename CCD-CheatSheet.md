@@ -363,7 +363,7 @@ Then identify the profile to be used later in the process, try out each suggeste
 python vol.py -f memory.dmp --profile=<profile> kdbgscan
 ```
 
-If the output the command for PsActiveProcessHead and PsLoadedModuleList of discovered processes and modules are 0, the wrong profile is used. Make sure that the Version64 and Build string (NtBuildLab) output values reflect each other. Try and error using this plugin (kdbgscan), until both of the said criteria are met, copy down the KdCopyDataBlock offset output as we will use it in the next step with any other plugin, *let us say `pslist`*,
+If the output of the command for PsActiveProcessHead and PsLoadedModuleList of discovered processes and modules are 0, the wrong profile is used. Make sure that the Version64 and Build string (NtBuildLab) output values reflect each other. Based on the plugin (kdbgscan) output, copy down actual profile name by matching the suggested profile(s) with Version64 and Build string (Can be found from Version64 minor value OR Build string first few digits before the dot) and the KdCopyDataBlock offset output as we will use it in the next step with any other plugin, *let us say `pslist`*,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
