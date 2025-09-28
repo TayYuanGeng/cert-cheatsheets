@@ -687,6 +687,14 @@ To extract the range of pages described by a VAD node,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> vaddump --dump-dir=/<output-directory>
 ```
 
+### dumpfiles Plugin
+
+To extract log files (.evtx) etc. use this plugin,
+
+```bash
+python vol.py -f memory.dmp --profile=<profile> -g <offset> dumpfiles --regex .evtx$ --ignore-case --dump-dir=/<output-directory>
+```
+
 ### Kernel Memory and Objects
 
 #### filescan Plugin
@@ -978,7 +986,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |Arsenal Image Mounter|https://arsenalrecon.com/|Used to mount different image types.|
 |Event log explorer|https://eventlogxp.com/|Used for Windows event log analysis.|
 |Full Event Log view|https://www.nirsoft.net/utils/full_event_log_view.html|Used to display a table that details all events from the event logs of Windows.|
-|Volatility|https://www.volatilityfoundation.org/ https://github.com/volatilityfoundation/volatility/wiki/Command-Reference/|Used for Memory Analysis.|
+|Volatility|https://www.volatilityfoundation.org/ https://github.com/volatilityfoundation/volatility/wiki/Command-Reference/ https://wongkenny240.gitbook.io/computerforensics/memory-analysis/volatility/|Used for Memory Analysis.|
 |AbuseIPDB|https://www.abuseipdb.com/|Detect abusive activity of IP address.|
 |IPQuality Score|https://www.ipqualityscore.com/|checks for IP addresses reputation.|
 |Any.run|https://app.any.run/|Malware Sandbox.|
