@@ -324,9 +324,9 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|Process Creation|Security.evtx|Event Log Explorer|
+|Process Creation|`Security.evtx`|Event Log Explorer|
 ||4688 -> A new process has been created (When process such as powershell, cmd, bin files are executed)||
-||Microsoft-Windows-Sysmon%4Operational.evtx|
+||`Microsoft-Windows-Sysmon%4Operational.evtx`|
 ||1 -> Process creation, extended information about newly created process.|
 ||10 -> ProcessAccess, reports when a process opens another process. Enables detection of hacking tools reading the memory contents of processes like lsass.exe|
 
