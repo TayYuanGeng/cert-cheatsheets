@@ -833,7 +833,7 @@ event.code: 1 and process.name.text: psexec*
  event.code: 13 AND registry.key: *\\PsExec\\EulaAccepted*
  ```
  OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
-OR Sysmonn Event ID 13.
+OR Sysmon Event ID 13.
 
 Detecting Mimikatz Activity in Network,
 
