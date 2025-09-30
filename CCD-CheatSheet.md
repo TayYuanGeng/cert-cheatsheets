@@ -309,7 +309,9 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Scheduled task|`C:\Windows\Tasks`|Task Scheduler Viewer|
 ||`Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tasks`||
 ||`Software\Microsoft\Windows NT\CurrentVersion\Schedule\Taskcache\Tree`||
-||`Microsoft-Windows-TaskScheduler%4Operational.evtx`||
+||`Security.evtx`|Event Log Explorer|
+||4698 -> A scheduled task was created.||
+||`Microsoft-Windows-TaskScheduler%4Operational.evtx`|Event Log Explorer|
 ||106 -> Task registered||
 ||200 -> Action started||
 ||201 -> Action completed||
