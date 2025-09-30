@@ -237,6 +237,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |File Creation/Command Execution (e.g. whoami, ping)|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
+||11 -> File created||
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
 ||4104 -> Scriptblock logging (Logs PowerShell script code when being executed even if it is obfuscated)||
 ||4656 -> User tried to access an object||
