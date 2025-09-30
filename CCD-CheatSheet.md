@@ -1004,7 +1004,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |IPQuality Score|https://www.ipqualityscore.com/|checks for IP addresses reputation.|
 |Any.run|https://app.any.run/|Malware Sandbox.|
 |VirusTotal|https://www.virustotal.com/gui/home/upload|Malware Sandbox.|
-|Tri.ge|https://tria.ge/|Malware Sandbox.|
+|Tria.ge|https://tria.ge/|Malware Sandbox.|
 |EZ Tools|https://ericzimmerman.github.io/#!index.md|Set of digital forensics tools.|
 |NTFS Log Tracker|https://sites.google.com/site/forensicnote/ntfs-log-tracker|Used to parse `$LogFile`, `$UsnJrnl:$J` of NTFS and carve `UsnJrnl` record in multiple files.|
 |UserAssist|https://blog.didierstevens.com/programs/userassist/|Used to display a table of programs executed on a Windows machine, run count, last execution date & time.|
@@ -1023,7 +1023,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |Open Threat Exchange (OTX)|https://otx.alienvault.com/|Open Threat Intelligence Community|
 |Canary Tokens|https://canarytokens.org/generate|Used for tracking anything.|
 |Elastic SIEM|https://www.elastic.co/security/siem|Used for aggregating data, logging, monitoring.|
-|Yara|https://virustotal.github.io/yara/|Used my malware researchers to identify and classify malware sample.|
+|Yara|https://virustotal.github.io/yara/|Used by malware researchers to identify and classify malware sample.|
 |SQLite Browser|https://sqlitebrowser.org/|A high quality, visual, open source tool to create, design, and edit database files compatible with SQLite.|
 |RegRipper|https://github.com/keydet89/RegRipper3.0|Used to surgically extract, translate, and display information from Registry-formatted files via plugins in the form of Perl-scripts.|
 |Binwalk|https://github.com/ReFirmLabs/binwalk|Used for for analyzing, reverse engineering, and extracting firmware images.|
