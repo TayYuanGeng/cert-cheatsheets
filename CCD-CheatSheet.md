@@ -835,6 +835,8 @@ event.code: 1 and process.name.text: psexec*
  OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
 OR Sysmon Event ID 13.
 
+PSEXESVC temporary service will be created to execute the commands specified in the attacker's command. This service will then utilise named pipes for communication.
+
 To detect named pipes used by PsExec, check Sysmon Event ID 18.
 
 Detecting Mimikatz Activity in Network,
