@@ -828,6 +828,13 @@ Detect PsExec Activity in the Network,
 ```kql
 event.code: 1 and process.name.text: psexec*
 ```
+ OR
+ If PsExec is not used in your environment, check if EULA for PsExec is accepted. If it is accepted, it would meant that a malicious remote access had happened.
+ ```kql
+ event.code: 13 AND registry.key: *\\PsExec\\EulaAccepted*
+ ```
+ OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
+OR Sysnon Event ID 13.
 
 Detecting Mimikatz Activity in Network,
 
