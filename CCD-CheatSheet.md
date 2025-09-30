@@ -313,7 +313,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||106 -> Task registered||
 ||200 -> Action started||
 ||201 -> Action completed||
-||For the list of event ids related to TaskScheduler%4Operational.evtx, refer [here].(https://docs.nxlog.co/integrate/windows-task-scheduler.html)||
+||For the list of event ids related to TaskScheduler%4Operational.evtx, refer [here](https://docs.nxlog.co/integrate/windows-task-scheduler.html).||
 
 #### Applications Installed
 
