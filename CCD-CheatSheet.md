@@ -835,6 +835,8 @@ event.code: 1 and process.name.text: psexec*
  OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
 OR Sysmon Event ID 13.
 
+To detect named pipes used by PsExec, check Sysmon Event ID 18.
+
 Detecting Mimikatz Activity in Network,
 
 ```kql
