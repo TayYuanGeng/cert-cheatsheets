@@ -820,29 +820,35 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 Detecting Persistence using Scheduled Tasks,
 
 ```kql
+process.name: schtasks.exe
+```
+
+OR
+```kql
 technique_id=T1053,technique_name=Scheduled Task
 ```
 
 Detect PsExec Activity in the Network,
 
 ```kql
-event.code: 1 and process.name.text: psexec*
+event.code: 1 and process.name: PsExe*
 ```
- OR if PsExec is not used in your environment, check if EULA for PsExec is accepted. If it is accepted, it would meant that a malicious remote access had happened.
- ```kql
- event.code: 13 AND registry.key: *\\PsExec\\EulaAccepted*
- ```
- OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
+
+OR if PsExec is not used in your environment, check if EULA for PsExec is accepted. If it is accepted, it would meant that a malicious remote access had happened.
+```kql
+event.code: 13 AND registry.key: *\\PsExec\\EulaAccepted*
+```
+OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
 OR Sysmon Event ID 13.
 
 PSEXESVC temporary service will be created to execute the commands specified in the attacker's command. This service will then utilise named pipes for communication.
 
 To detect named pipes used by PsExec, check Sysmon Event ID 18.
 
-Detecting Mimikatz Activity in Network,
+Detecting Credential Dumping Activity (e.g. Mimikatz, procdump) in Network,
 
 ```kql
-event.code: 10 and winlog.event_data.TargetImage: *\\lsass.exe
+event.code: 10 and winlog.event_data.TargetImage: *lsass.exe*
 ```
 
 ---
