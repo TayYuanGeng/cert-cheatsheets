@@ -1005,6 +1005,16 @@ event.code : "1" and process.command_line : */node* and process.command_line : *
 ```
 The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, refer [here](https://lolbas-project.github.io/#wmi)
 
+#### MSSQL
+
+|**What To Look For**|**Where To Find It**|**Investigation Tool**|
+|:---:|:---:|:---:|
+|Username, creation date ,login date, SID|SAM|Registry Explorer/RegRipper|
+|Login, logout, deletion, creation|Application.evtx|Event Log Explorer|
+||18455 -> Login succeeded for user '%.*ls'.%.*ls|
+||18456 -> Login failed for user '%.*ls'.%.*ls|
+||For more info, goto https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999?view=sql-server-ver17|
+
 ---
 ---
 
