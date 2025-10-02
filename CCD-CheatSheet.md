@@ -996,6 +996,15 @@ To print the strings of printable characters,
 strings <file>
 ```
 
+### Detecting LOLBin commands used (Via Elastic SIEM)
+
+To detect LOLBin usages, one common remotely executed commands via LOLBin, is through the usage of **/node** and **process call create**
+
+```bash
+event.code : "1" and process.command_line : */node* and process.command_line : *process call create*
+```
+The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, refer [here](https://lolbas-project.github.io/#wmi)
+
 ---
 ---
 
