@@ -1011,9 +1011,16 @@ The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, re
 |:---:|:---:|:---:|
 |Username, creation date ,login date, SID|SAM|Registry Explorer/RegRipper|
 |Login, logout, deletion, creation|Application.evtx|Event Log Explorer|
+||15457 -> Configuration option '%ls' changed from %ld to %ld. Run the RECONFIGURE statement to install.|
 ||18455 -> Login succeeded for user '%.*ls'.%.*ls|
 ||18456 -> Login failed for user '%.*ls'.%.*ls|
 ||For more info, goto https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999?view=sql-server-ver17|
+
+For KQL queries on MSSQL, use
+
+```kql
+event.provider : "MSSQL$SQLEXPRESS"
+```
 
 ---
 ---
