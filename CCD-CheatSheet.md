@@ -393,6 +393,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
 pslist plugin to discover anomalies:
 <ol>
   <li>powershell.exe</li>
+  <li>cmd.exe</li>
   <li>Unusual process names</li>
   <li>Processes running at time of incident</li>
   <li>Multiple same processes that is supposed to be a singleton process. Example of singleton process includes:</li>
