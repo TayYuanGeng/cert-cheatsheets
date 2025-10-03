@@ -392,6 +392,7 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> pslist
 ```
 pslist plugin to discover anomalies:
 <ol>
+  <li>powershell.exe</li>
   <li>Unusual process names</li>
   <li>Processes running at time of incident</li>
   <li>Multiple same processes that is supposed to be a singleton process. Example of singleton process includes:</li>
@@ -403,13 +404,22 @@ pslist plugin to discover anomalies:
   </ul>
 </ol>
 
-#### psscan Plugin
+#### psscan Plugin (Good for finding hidden processes that are not shown in pslist)
 
 To enumerate processes using pool tag scanning,
 
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> psscan
 ```
+pscan plugin to discover anomalies:
+<ol>
+  <li>Persistence Processes</li>
+  <ul>
+    <li>schtasks.exe</li>
+    <li>reg.exe (Adding registry keys)</li>
+    <li>sc.exe, net.exe (Adding a malicious service with autostart)</li>
+  </ul>
+</ol>
 
 #### dlllist Plugin
 
