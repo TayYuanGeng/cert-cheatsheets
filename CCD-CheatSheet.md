@@ -1063,7 +1063,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |NTFS Log Tracker|https://sites.google.com/site/forensicnote/ntfs-log-tracker|Used to parse `$LogFile`, `$UsnJrnl:$J` of NTFS and carve `UsnJrnl` record in multiple files.|
 |UserAssist|https://blog.didierstevens.com/programs/userassist/|Used to display a table of programs executed on a Windows machine, run count, last execution date & time.|
 |R-Studio|https://www.r-studio.com/Data_Recovery_Download.shtml|Used to recover lost files.|
-|Wireshark|https://www.wireshark.org/|Used for Network Traffic analysis.|
+|Wireshark|https://www.wireshark.org/<br> For filtering, use ~ for finding content containing specified value|Used for Network Traffic analysis.|
 |CobaltStrikeParser|https://github.com/Sentinel-One/CobaltStrikeParser|A python parser for CobaltStrike Beacon's configuration.|
 |Suricata|https://suricata.io/|A popular open-source IDS.|
 |RITA|https://github.com/activecm/rita|An open source framework for detecting C2 through network traffic analysis.|
