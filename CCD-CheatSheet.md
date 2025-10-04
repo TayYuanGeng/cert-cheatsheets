@@ -865,12 +865,12 @@ event.code: 10 and winlog.event_data.TargetImage: *lsass.exe*
 
 ### Detect new SID group (e.g. for mail capabilites)
 
-Indicates a user created a security-enabled global group
+Indicates a user created a security-enabled global group, output will provide SID, group name, group domain, privileges etc.
 ```kql
 event.code: 4727
 ```
 OR
-Indicates a user added a user/group/computer to a security-enabled global group, which can be used for permissions and rights.
+Indicates a user added a user/group/computer to a security-enabled global group, which can be used for permissions and rights, output will provide SID, group name, group domain, privileges etc.
 ```kql
 event.code: 4728
 ```
