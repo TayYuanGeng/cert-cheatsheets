@@ -877,6 +877,8 @@ event.code: 4728
 ```
 
 ### MITRE Classification
+|Example|Classification|
+|:---:|:---:|
 |Leveraged existing, long-running processes to alter the process hierarchy of new processes and to execute malicious code in the context of these long-running processes.|T1055.002|
 
 ---
