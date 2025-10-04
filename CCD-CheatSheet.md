@@ -821,8 +821,9 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |:---:|:---:|:---:|
 |user.name|`event.category: "authentication" and user.name: administrator and event.outcome: failure`|Looks for failed login attempt targeting username administrator|
 |winlog.logon.type|`event.category : "authentication" and winlog.logon.type: "Network"`|Look for authentication that happened over the network|
-||`event.category : "authentication" and winlog.logon.type: "RemoteInteractive"` OR `winlog.event_data.LogonType: 10`|Look for RDP authentication|
+||`event.category : "authentication" and winlog.logon.type: "RemoteInteractive"` OR `winlog.event_data.LogonType: 10`|Look for RDP successful authentication|
 ||`Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`|To confirm if its RDP, look for event id 261|
+||`Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`|To confirm successful authentication to RDP, look for event if 1149, this may also reveal the source ip of suceeded authentication|
 |winlog.event_data.AuthenticationPackageName|`event.category : "authentication" and event.action: logged-in and winlog.logon.type: "Network" and user.name.text: administrator and event.outcome: success and winlog.event_data.AuthenticationPackageName: NTLM`|Look for successful network authentication events against the user administrator, and the  authentication package is NTLM.|
 
 ---
