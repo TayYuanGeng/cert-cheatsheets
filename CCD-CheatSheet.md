@@ -829,7 +829,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 
 ## Endpoint Threat Hunting
 
-Detecting Persistence using Scheduled Tasks,
+### Detecting Persistence using Scheduled Tasks,
 
 ```kql
 process.name: schtasks.exe
@@ -840,7 +840,7 @@ OR
 technique_id=T1053,technique_name=Scheduled Task
 ```
 
-Detect PsExec Activity in the Network,
+### Detect PsExec Activity in the Network,
 
 ```kql
 event.code: 1 and process.name: PsExe*
@@ -861,6 +861,18 @@ Detecting Credential Dumping Activity (e.g. Mimikatz, procdump) in Network,
 
 ```kql
 event.code: 10 and winlog.event_data.TargetImage: *lsass.exe*
+```
+
+### Detect new SID group (e.g. for mail capabilites)
+
+Indicates a user created a security-enabled global group
+```kql
+event.code: 4727
+```
+OR
+Indicates a user added a user/group/computer to a security-enabled global group, which can be used for permissions and rights.
+```kql
+event.code: 4728
 ```
 
 ---
