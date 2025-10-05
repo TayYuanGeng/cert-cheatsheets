@@ -893,6 +893,11 @@ event.code: 4728
 |.log|Log Files|
 |.ldb|Temporary lock file storing session tokens|
 
+### Disable real-time monitoring
+Attackers often do this to cover their tracks by removing real-time monitoring, blue teamers will have a harder time recovering.
+- `Set-MpPreference -DisableRealtimeMonitoring $true` effectively blinds blue teamers since logs are useful for recovering.
+- Any variatins of auditpol (e.g. `auditpol /clear /y`) can prevent system auditing entirely.
+
 ---
 
 ## Network Threat Hunting
