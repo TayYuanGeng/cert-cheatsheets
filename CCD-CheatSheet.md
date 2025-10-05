@@ -884,7 +884,7 @@ event.code: 4728
 ### Attackers like to search for specific services/strings
 |Command|Example|
 |:---:|:---:|
-|Filter for Event ID 1, "findstr" OR "Select-String"|`findstr /I "wrsa opssvc"` OR `Select-String -Path "C:\Logs\application.log" -Pattern "Error"`|
+|Commonly piped with tasklist and findstr/Select-String to check for services. Filter for Event ID 1, "findstr" OR "Select-String" OR "Get-Service"|`findstr /I "wrsa opssvc"` OR `Select-String -Path "C:\Logs\application.log" -Pattern "Error"`|
 
 ### File Type
 |Extensions|Type|
