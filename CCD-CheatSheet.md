@@ -886,6 +886,13 @@ event.code: 4728
 |:---:|:---:|
 |Filter for Event ID 1, "findstr" OR "Select-String"|`findstr /I "wrsa opssvc"` OR `Select-String -Path "C:\Logs\application.log" -Pattern "Error"`|
 
+### File Type
+|Extensions|Type|
+|:---:|:---:|
+|.bat,.cmd|Bash Scripts|
+|.log|Log Files|
+|.ldb|Temporary lock file storing session tokens|
+
 ---
 
 ## Network Threat Hunting
