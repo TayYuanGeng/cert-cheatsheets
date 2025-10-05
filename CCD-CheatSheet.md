@@ -881,6 +881,11 @@ event.code: 4728
 |:---:|:---:|
 |Leveraged existing, long-running processes to alter the process hierarchy of new processes and to execute malicious code in the context of these long-running processes.|T1055.002|
 
+### Attackers like to search for specific services/strings
+|Command|Example|
+|:---:|:---:|
+|Filter for Event ID 1, "findstr" OR "Select-String"|`findstr /I "wrsa opssvc"` OR `Select-String -Path "C:\Logs\application.log" -Pattern "Error"`|
+
 ---
 
 ## Network Threat Hunting
