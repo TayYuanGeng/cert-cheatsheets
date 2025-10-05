@@ -897,6 +897,7 @@ event.code: 4728
 Attackers often do this to cover their tracks by removing real-time monitoring, blue teamers will have a harder time recovering.
 - `Set-MpPreference -DisableRealtimeMonitoring $true` effectively blinds blue teamers since logs are useful for recovering.
 - Any variatins of auditpol (e.g. `auditpol /clear /y`) can prevent system auditing entirely.
+- wevtutil cl <event log name> (e.g. `wevtutil cl System`) wipes clean the event log.
 
 ---
 
