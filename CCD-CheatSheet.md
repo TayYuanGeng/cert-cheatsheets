@@ -852,7 +852,7 @@ OR if PsExec is not used in your environment, check if EULA for PsExec is accept
 event.code: 13 AND registry.key: *\\PsExec\\EulaAccepted*
 ```
 OR check via registry key `NTUSER\Software\SysInternals\PsExec\EulaAccepted`
-OR Sysmon Event ID 13.
+OR Sysmon Event ID 12 OR 13.
 
 PSEXESVC temporary service will be created to execute the commands specified in the attacker's command. This service will then utilise named pipes for communication.
 
