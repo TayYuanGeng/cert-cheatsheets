@@ -1128,6 +1128,9 @@ Here is the list of all the tools utilized during the completion of the Certific
 |Prefetchruncounts.py|https://github.com/dfir-scripts/prefetchruncounts|Used for Parsing and extracting a sortable list of basic Windows Prefetch file information based on "last run" timestamps.|
 |parseMFT|https://pypi.org/project/parseMFT/#files|Parse the $MFT from an NTFS filesystem.|
 |Brim|https://www.brimdata.io/|Used for network troubleshooting and security incident response.|
+||`event_type=="alert"` is a good start to check for signatures and filter out traffic|
+||`event_type=="alert" alert.severity==1` is another one to filter for only the critical alerts|
+||`<command> alert.severity==1\| count() by alert.signature` is related to above to focus only on specific critical signatures|
 |NetworkMiner|https://www.netresec.com/?page=networkminer|Used to extract artifacts, such as files, images, emails and passwords, from captured network traffic in PCAP files.|
 |Autopsy|https://www.autopsy.com/download/|Used for analyzing forensically-sound images.|
 |Capa-Explorer|https://github.com/mandiant/capa|Used to identify capabilities in executable files.|
