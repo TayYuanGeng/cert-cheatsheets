@@ -899,6 +899,10 @@ Attackers often do this to cover their tracks by removing real-time monitoring, 
 - Any variatins of auditpol (e.g. `auditpol /clear /y`) can prevent system auditing entirely.
 - wevtutil cl <event log name> (e.g. `wevtutil cl System`) wipes clean the event log.
 
+### Executable usually used by attackers
+|Executable|
+|:---:|
+|bitsadmin (Deprecated, older version), certutil (newer version)|
 ---
 
 ## Network Threat Hunting
