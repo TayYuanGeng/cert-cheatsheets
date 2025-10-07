@@ -250,7 +250,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`Software\Microsoft\Office\15.0<Office application>\Place MRU`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\ComDlg32\OpenSavePidlMRU\*`||
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\RecentDocs`||
-||`Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU`||
+||`Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU`|Check event id 13 and filter `runMRU` for any PowerShell command via Run|
 ||`Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths`||
 |Accessed Local/Network folders|ShellBags|ShellBags Explorer|
 ||NTUSER.dat||
