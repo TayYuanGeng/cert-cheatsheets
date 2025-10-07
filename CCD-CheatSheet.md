@@ -914,6 +914,13 @@ To detect data exfiltration through DNS,
 agent.type: "packetbeat" and type: dns AND not dns.response_code: "NOERROR"
 ```
 
+### URLs visited
+|Browser|History file location|Remarks|
+|:---:|:---:|:---:|
+|Edge|`C:\Users\<username>\AppData\Local\Micrsoft\Edge\User Data\Default`|To check where users visited which URLs, goto history file location and put the history file into DB Browser for SQLite|
+|Google Chrome|`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default`|For more information, click [here](https://docs.nxlog.co/integrate/browser-history.html)|
+|Mozilla Firefox|`C:\Users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile folder>`||
+
 ---
 ---
 
