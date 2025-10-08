@@ -1158,3 +1158,4 @@ Here is the list of all the tools utilized during the completion of the Certific
 |HindSight|https://github.com/obsidianforensics/hindsight|Used for Web browser forensics for Google Chrome/Chromium|
 |xxd|https://linux.die.net/man/1/xxd|Creates a HEX dump of a file/input|
 |ShimCacheParser|https://github.com/mandiant/ShimCacheParser|Used to parse the Application Compatibility Shim Cache stored in the Windows registry|
+|File Signatures for malware analysis|https://www.garykessler.net/library/file_sigs_GCK_latest.html|Used for reference on the list of file signatures. These file signatures appear at start of the hex dump.|
