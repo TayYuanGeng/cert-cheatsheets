@@ -1120,6 +1120,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 ||To find URL that was redirected to the malicious site, filter base on the malicious site IP address or `http.host==<malicious site name>` then find and type `Referer`.||
 ||From dhcp traffic, you can find out the hostname of the client leasing IP address||
 ||From http traffic, you can identify the source operating system. See User-Agent field||
+||To check ephemeral public key provided by the server during the TLS handshake in the session, take the session id and filter based on `tls.handshake.session_id == <session id>` then search for `Pubkey`. The value could be found in Handshake Protocol: Server Key Exchange > EC Diffie-Hellman Server Params > Pubkey||
 |CobaltStrikeParser|https://github.com/Sentinel-One/CobaltStrikeParser|A python parser for CobaltStrike Beacon's configuration.|
 |Suricata|https://suricata.io/|A popular open-source IDS.|
 |RITA|https://github.com/activecm/rita|An open source framework for detecting C2 through network traffic analysis.|
