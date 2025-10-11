@@ -1093,7 +1093,7 @@ event.provider : "MSSQL$SQLEXPRESS"
 In the event where sysmon log is gone.
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|To see what URL was visited, especially `log4shell.huntress.com` payload as it can be used to detect vCenter instance is vulnerable|`C:\ProgramData\VMware\vCenterServer\runtime\VMwareSTSService\logs\websso.log`|Notepad|
+|To see what attacker's IP address and URL was visited, especially `log4shell.huntress.com` payload as it can be used to detect vCenter instance is vulnerable|`C:\ProgramData\VMware\vCenterServer\runtime\VMwareSTSService\logs\websso.log`|Notepad|
 
 ---
 ---
