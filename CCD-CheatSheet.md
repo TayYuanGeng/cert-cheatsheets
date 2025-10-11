@@ -1167,4 +1167,4 @@ Here is the list of all the tools utilized during the completion of the Certific
 |ShimCacheParser|https://github.com/mandiant/ShimCacheParser|Used to parse the Application Compatibility Shim Cache stored in the Windows registry|
 |File Signatures for malware analysis|https://www.garykessler.net/library/file_sigs_GCK_latest.html|Used for reference on the list of file signatures. These file signatures appear at start of the hex dump.|
 |Pesec|https://pev.sourceforge.io/doc/manual/en_us/ch06s08.html|To check for security features in PE files|
-|Microsoft-Windows-Windows Defender%4Operational|https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus|
+|Microsoft-Windows-Windows Defender%4Operational|https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus|For Windows Defender related events|
