@@ -1163,6 +1163,8 @@ Here is the list of all the tools utilized during the completion of the Certific
 ||pst files are usually found in `C:\Users\<Username>\Documents\Outlook Files\`|`.pst` files are related to outlook and 4n6 Outlook Forensics Wizard can be used to analyse the files|
 |FakeNet|https://github.com/mandiant/flare-fakenet-ng|Used for dynamic network analysis.|
 |oletools|https://github.com/decalage2/oletools|Set of tools used for malware analysis, forensics, and debugging.|
+|oleid.py|Can be used to identify whats inside the document/file|Example: To check if xls file contains a vba macro|
+|olevba.py|Can be used to examine the vba embedded within the xls file||
 |scdbg|http://sandsprite.com/blogs/index.php?uid=7&pid=152|Used to display to the user all of the Windows API the shellcode attempts to call.|
 |Resource Hacker|http://angusj.com/resourcehacker|A freeware resource compiler & decompiler for Windows applications.|
 |Hashcat|https://hashcat.net/hashcat/|Used to crack the hashes to obtain plain-text password.|
