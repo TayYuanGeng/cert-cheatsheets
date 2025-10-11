@@ -1160,6 +1160,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |USB Forensic Tracker|http://orionforensics.com/forensics-tools/usb-forensic-tracker|Used to extracts USB device connection artefacts from a range of locations.|
 |WinDbg|https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools|Used for debugging.|
 |Outlook Forensics Wizard|https://forensiksoft.com/outlook-forensics.html|Used to open, search, analyze, & export outlook data files of any size.|
+||pst files are usually found in `C:\Users\<Username>\Documents\Outlook Files\`|`.pst` files are related to outlook and 4n6 Outlook Forensics Wizard can be used to analyse the files|
 |FakeNet|https://github.com/mandiant/flare-fakenet-ng|Used for dynamic network analysis.|
 |oletools|https://github.com/decalage2/oletools|Set of tools used for malware analysis, forensics, and debugging.|
 |scdbg|http://sandsprite.com/blogs/index.php?uid=7&pid=152|Used to display to the user all of the Windows API the shellcode attempts to call.|
