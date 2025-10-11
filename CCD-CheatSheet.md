@@ -1083,6 +1083,12 @@ The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, re
 ||18456 -> Login failed for user '%.*ls'.%.*ls|
 ||For more info, goto https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999?view=sql-server-ver17|
 
+#### log4shell
+In the event where sysmon log is gone.
+|**What To Look For**|**Where To Find It**|**Investigation Tool**|
+|:---:|:---:|:---:|
+|To see what URL was visited, especially `log4shell.huntress.com` payload as it can be used to detect vCenter instance is vulnerable|`C:\ProgramData\VMware\vCenterServer\runtime\VMwareSTSService\logs\websso.log`|Notepad|
+
 For KQL queries on MSSQL, use
 
 ```kql
