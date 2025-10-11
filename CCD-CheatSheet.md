@@ -1167,7 +1167,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |WinDbg|https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/debugger-download-tools|Used for debugging.|
 |Outlook Forensics Wizard|https://forensiksoft.com/outlook-forensics.html|Used to open, search, analyze, & export outlook data files of any size.|
 ||pst files are usually found in `C:\Users\<Username>\Documents\Outlook Files\`|`.pst` files are related to outlook and 4n6 Outlook Forensics Wizard can be used to analyse the files|
-|FakeNet|https://github.com/mandiant/flare-fakenet-ng|Used for dynamic network analysis. After running the exe file, it will open a cmd and listens for traffic. Execute the malicious file and allow FakeNet to pick up outgoing traffic to malicious IP addresses|
+|FakeNet|https://github.com/mandiant/flare-fakenet-ng|Used for dynamic network analysis. After running the fakenet.exe file, it will open a cmd and listens for traffic. Execute the malicious file and allow FakeNet to pick up outgoing traffic to malicious IP addresses|
 |oletools|https://github.com/decalage2/oletools|Set of tools used for malware analysis, forensics, and debugging.|
 |oleid.py|Can be used to identify whats inside the document/file|Example: To check if xls file contains a vba macro|
 |olevba.py|Can be used to examine the vba embedded within the xls file||
