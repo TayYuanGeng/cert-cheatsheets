@@ -865,6 +865,7 @@ Detecting Credential Dumping Activity (e.g. Mimikatz, procdump) in Network,
 ```kql
 event.code: 10 and winlog.event_data.TargetImage: *lsass.exe*
 ```
+For sysmon event log, filter for event id 10 OR "Credential Dumping", usually attackers will use rundll32.exe to call lsass.exe.
 
 ### Detect new SID group (e.g. for mail capabilites)
 
