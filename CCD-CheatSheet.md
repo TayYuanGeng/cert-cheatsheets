@@ -186,7 +186,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |HKEY_LOCAL_MACHINE/SYSTEM|`C:\Windows\System32\config\SYSTEM`|Registry Explorer/RegRipper|
 |HKEY_LOCAL_MACHINE/SOFTWARE|`C:\Windows\System32\config\SOFTWARE`|Registry Explorer/RegRipper|
 |HKEY_USERS|`C:\Windows\System32\config\SAM`|Registry Explorer/RegRipper|
-|HKEY_CURRENT_USER|`C:\Users<USER>\NTUSER.dat` `C:\Users<user>\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat`|Registry Explorer/RegRipper|
+|HKEY_CURRENT_USER|`C:\Users\<USER>\NTUSER.dat`<br>`C:\Users\<user>\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat`|Registry Explorer/RegRipper|
 |Amcache.hve|`C:\Windows\appcompat\Programs\Amcache.hve`|Registry Explorer/RegRipper|
 |Event Viewer -> Windows Logs -> SECURITY|`C:\Windows\winevt\Logs\Security.evtx`|Event logs Explorer|
 |Event Viewer -> Windows Logs -> SYSTEM|`C:\Windows\winevt\Logs\SYSTEM.evtx`|Event logs Explorer|
