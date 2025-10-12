@@ -931,7 +931,7 @@ agent.type: "packetbeat" and type: dns AND not dns.response_code: "NOERROR"
 |Google Chrome|`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default\History`|For more information, click [here](https://docs.nxlog.co/integrate/browser-history.html)|
 ||`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default\Web Data` OR `Login Data`|This files contain autofill data|
 ||`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Last Version`|This file contains latest browser version installed|
-|Mozilla Firefox|`C:\Users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile folder>`||
+|Mozilla Firefox|`C:\Users\<username>\AppData\Roaming\Mozilla\Firefox\Profiles\<profile folder>\places.sql`||
 
 ---
 ---
