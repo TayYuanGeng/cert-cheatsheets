@@ -927,7 +927,7 @@ agent.type: "packetbeat" and type: dns AND not dns.response_code: "NOERROR"
 ### URLs visited/AutoFill Data/Latest browser version installed
 |Browser|History file location|Remarks|
 |:---:|:---:|:---:|
-|Edge|`C:\Users\<username>\AppData\Local\Micrsoft\Edge\User Data\Default\History`|To check where users visited which URLs, goto history file location and put the history file into DB Browser for SQLite (If disk I/O error appears, copy the file out to your local dir) OR nirsoft's BrowsingHistoryView. For BrowsingHistoryView, remember to set filter by visit date/time to `Load history items from any time` and load history from `specified profile`|
+|Edge|`C:\Users\<username>\AppData\Local\Microsoft\Edge\User Data\Default\History`|To check where users visited which URLs, goto history file location and put the history file into DB Browser for SQLite (If disk I/O error appears, copy the file out to your local dir) OR nirsoft's BrowsingHistoryView. For BrowsingHistoryView, remember to set filter by visit date/time to `Load history items from any time` and load history from `specified profile`|
 |Google Chrome|`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default\History`|For more information, click [here](https://docs.nxlog.co/integrate/browser-history.html)|
 ||`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Default\Web Data` OR `Login Data`|This files contain autofill data|
 ||`C:\Users\<username>\AppData\Local\Google\Chrome\User Data\Last Version`|This file contains latest browser version installed|
