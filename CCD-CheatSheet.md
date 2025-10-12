@@ -189,6 +189,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |HKEY_CURRENT_USER|`C:\Users\<USER>\NTUSER.dat`<br>`C:\Users\<user>\Local Settings\Application Data\Microsoft\Windows\UsrClass.dat`|Registry Explorer/RegRipper|
 |Amcache.hve|`C:\Windows\appcompat\Programs\Amcache.hve`|Registry Explorer/RegRipper|
 |Event Viewer -> Windows Logs -> SECURITY|`C:\Windows\winevt\Logs\Security.evtx`|Event logs Explorer|
+||For event id 4104 (script block logging), for dead system, check `C:\Users\<Username>\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` for the commands executed history||
 |Event Viewer -> Windows Logs -> SYSTEM|`C:\Windows\winevt\Logs\SYSTEM.evtx`|Event logs Explorer|
 |Event Viewer -> Windows Logs -> Application|`C:\Windows\winevt\Logs\Application.evtx`|Event logs Explorer|
 |Event viewer -> Applications & service logs -> Microsoft -> Windows -> TaskScheduler -> Operational|`Microsoft-Windows-TaskScheduler%4Operational.evtx`|Event logs Explorer|
