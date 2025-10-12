@@ -155,6 +155,8 @@ First, determine all mounted disks, and we will specifically choose one of them 
 df -h
 ```
 
+It can also be determined via registry hives, in both `SYSTEM\MountedDevices` and `SOFTWARE\Microsoft\Windows Search\VolumeInfoCache`. Do note that you may require both to confirm where the additional partition is mounted on.
+
 Now, proceed to the acquisition,
 
 ```bash
