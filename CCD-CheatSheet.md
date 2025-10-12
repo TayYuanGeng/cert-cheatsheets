@@ -240,7 +240,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||11 -> File created||
 ||23 -> File Deleted||
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
-||4104 -> Scriptblock logging (Logs PowerShell script code when being executed even if it is obfuscated)||
+||4104 -> Scriptblock logging (Logs PowerShell script code when being executed even if it is obfuscated)|Microsoft-Windows-PowerShell%4Operational.evtx has the same event id|
 ||4656 -> User tried to access an object||
 ||4660 -> object was deleted||
 ||4663 -> User accessed the object successfully||
