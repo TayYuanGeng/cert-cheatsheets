@@ -307,7 +307,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Files path, md5 & sha1 hash|`Amcache.hve`|Amcache Parser|
 |Background applications|`BAM & DAM`|Registry Explorer/RegRipper|
 ||`SYSTEM\ControlSet001\Services\bam\State\UserSettings`||
-|Filename, size, run count, each run timestamp, path|`Prefetch`|WinPrefetchView|
+|Filename, size, run count, each run timestamp, path, total amount of prefetch files (THIS IS THE MOST ACCURATE, DON'T REFER TO CSV FILE. FOR TOTAL PREFETCH FILES, USE THE TOTAL PREFETCH FILES MINUS PREFETCH FILES WITH 0 SIZE)|`Prefetch`|WinPrefetchView|
 ||`C:\Windows\Prefetch`||
 |Program network usage, memory usage|`SRUM`|SrumECmd|
 ||`C:\Windows\System32\sru\SRUDB.dat`||
