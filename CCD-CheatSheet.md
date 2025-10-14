@@ -956,6 +956,7 @@ Extract the Prefetch directory from the `C:\Windows\Prefetch` path using FTK Ima
 ```cmd
 PECmd.exe -f "/path/to/Prefetch" --csv "<output-directory>" --csvf results.csv
 ```
+PECmd is useful to find out number of runtimes.
 
 #### LECmd
 
