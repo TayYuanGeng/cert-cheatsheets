@@ -941,13 +941,15 @@ agent.type: "packetbeat" and type: dns AND not dns.response_code: "NOERROR"
 
 ### Eric Zimmerman Tools
 
-#### MFTCmd
+#### MFTECmd
 
 Extract the `$MFT` file from the `C:\$MFT` directory,
 
 ```cmd
 MFTECmd.exe -f "/path/to/$MFT" --csv "<output-directory>" --csvf results.csv
 ```
+
+Can also be paired with `--de` and `--do` params where `--de` value will be the Entry Number that can be found from the MFT extracted csv file. Then `--do` offset value can be found from the output of `--de`. The output of `--do` includes log file sequence number shown in hex values.
 
 #### PECmd
 
