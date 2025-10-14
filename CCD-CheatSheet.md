@@ -1197,3 +1197,4 @@ Here is the list of all the tools utilized during the completion of the Certific
 |MSSQL Logs|`<Drive Name>\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`|Useful to check which MSSQL account has attempted to logon, IP address initiating it and the configurations changed|
 |jd GUI|https://java-decompiler.github.io/|Good to view class files. To obtain class files, upload the jar file to jd GUI. Upon uploading, it will expand to multiple directories containing class files. E.g. `log4j-core-<version number>.jar`|
 |Hashes|`hashes.com`|Useful for decrpyting hashes, if given a credential dump for windows, you will see two hashes, the first is a LM hash (not used, insecure), the second is a NT hash. Use NT hash.|
+|HxD|`https://mh-nexus.de/en/hxd/`|Hex Editor useful for checking file signatures (any other hidden files) at the top of the stream when it is hex dumped|
