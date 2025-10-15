@@ -854,6 +854,11 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |To confirm successful authentication to RDP, look for event if 1149, this may also reveal the source ip of suceeded authentication|`Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`||
 |To check if attacker enabled RDP, look for event id 1. Reg add command `reg add "hklm\system\currentcontrolset\control\terminal server" /f /v fDenyTSConnections /t REG_DWORD /d 0 1`|`Microsoft-Windows-Sysmon%4Operational.evtx`||
 
+#### Kerberos Protocol Encryption Type
+|What To Look For|Where To Find It|Investigation Tool|
+|:---:|:---:|:---:|
+|To check the Kerberos Encryption type, check against Elastic SIEM (ELK) and [documentation](https://system32.eventsentry.com/codes/field/Kerberos%20Encryption%20Types) for the encryption protocol|Filter based on `winlog.event_data.TicketEncryptionType`|ELK|
+
 ---
 
 ## Endpoint Threat Hunting
