@@ -862,6 +862,8 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |4769|A Kerberos service ticket was requested|ELK|
 |4771|Kerberos pre-authentication failed|ELK|
 
+Note that krbtgt service account WILL always be contacted for kerberos processes.
+
 #### WMIC related event IDs
 |Sysmon Event ID|Description|
 |:---:|:---:|
