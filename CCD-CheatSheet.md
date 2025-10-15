@@ -946,6 +946,7 @@ Attackers often do this to cover their tracks by removing real-time monitoring, 
 - `Set-MpPreference -DisableRealtimeMonitoring $true` effectively blinds blue teamers since logs are useful for recovering.
 - Any variatins of auditpol (e.g. `auditpol /clear /y`) can prevent system auditing entirely.
 - wevtutil cl <event log name> (e.g. `wevtutil cl System`) wipes clean the event log.
+- `sc stop WinDefend` sc is commonly used to manage and communicate with the services.
 
 ### Executable usually used by attackers
 |Executable|
