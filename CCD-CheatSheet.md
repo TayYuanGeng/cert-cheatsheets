@@ -760,6 +760,7 @@ To find the hidden or injected DLLs in the memory,
 ```bash
 volatility -f <memory_dump> --profile=<profile> -g <offset> malfind
 ```
+`svchost.exe` is a common process that is being used for code injection, run malfind to find out if it has the `MZ` signature through the hex dump `4d 5a`
 
 #### yarscan Plugin
 
