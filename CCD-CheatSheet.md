@@ -859,6 +859,15 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |:---:|:---:|:---:|
 |To check the Kerberos Encryption type, check against Elastic SIEM (ELK) and [documentation](https://system32.eventsentry.com/codes/field/Kerberos%20Encryption%20Types) for the encryption protocol|Filter based on `winlog.event_data.TicketEncryptionType`|ELK|
 
+#### WMIC related event IDs
+|Sysmon Event ID|Description|
+|:---:|:---:|
+|19|WmiEventFilter activity detected|
+|20|WmiEventConsumer activity detected|
+|21|WmiEventConsumerToFilter activity detected|
+
+For WmiEventConsumer name, try filter event id 20 and add column in ELK: `winlog.event_data.Name`.
+
 ---
 
 ## Endpoint Threat Hunting
