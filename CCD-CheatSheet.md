@@ -1116,6 +1116,7 @@ To detect LOLBin usages, one common remotely executed commands via LOLBin, is th
 event.code : "1" and process.command_line : */node* and process.command_line : *process call create*
 ```
 The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, refer [here](https://lolbas-project.github.io/#wmi)
+Best to include display of `process.command_line` column when filtering to `event.code: 1`
 
 #### MSSQL
 
