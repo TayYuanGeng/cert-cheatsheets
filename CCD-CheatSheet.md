@@ -580,6 +580,8 @@ In the output, it will have `InLoad`, `InInit` and `InMem` with the value true/f
 
 It will also output the base address. If the base address is a low value, investigate.
 
+Mispelled DLL names are also another indicator.
+
 ### Networking
 
 #### netscan Plugin
