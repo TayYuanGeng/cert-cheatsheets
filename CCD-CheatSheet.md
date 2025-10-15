@@ -567,8 +567,18 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> cmdscan
 To list the DLLs in WoW64 processes,
 
 ```bash
-python vol.py -f memory.dmp --profile=<profile> -g <offset> ldrmodules
+python vol.py -f memory.dmp --profile=<profile> -g <offset> ldrmodules -p <suspicious pid>
 ```
+
+In the output, it will have `InLoad`, `InInit` and `InMem` with the value true/false. 
+| Flags                 | Likely meaning                                           |
+| --------------------- | -------------------------------------------------------- |
+| True / True / True    | Normal, loader-registered DLL                            |
+| False / False / False | Manually mapped / reflective DLL / injected              |
+| True / False / True   | Unlinked from init list or partially hidden — suspicious |
+| False / True / True   | Strange — likely tampered with; investigate              |
+
+It will also output the base address. If the base address is a low value, investigate.
 
 ### Networking
 
