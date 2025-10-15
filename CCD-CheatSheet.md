@@ -530,6 +530,8 @@ To find open handles in a process,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> handles
 ```
 
+Use `-p <pid> -t file` to find out file referenced in a specific process. Attackers like to use `.sys` files to interact with kernel.
+
 To find open handles of a particular process with PID XXXX,
 
 ```bash
