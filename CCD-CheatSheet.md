@@ -222,7 +222,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||4624 -> Successful logon event, it shows you the Workstation Name AKA hostname and source network/ip address|Sometimes sysmon event id 1 can find for commands performing network logon|
 ||4625 -> failed logon event|
 ||4634 -> Session terminated|
-||4647 -> User initiated logoff|
+||4647 -> User initiated logoff [This is the most accurate if it asks for user logoff time]|
 ||4672 -> Special privilege logon|
 ||4648 -> User run program as another user (Runas administrator)|
 ||4720/4726 -> Account creation/deletion|
