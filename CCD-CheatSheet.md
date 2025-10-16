@@ -792,6 +792,8 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 
 # Threat Hunting
 
+For file size filter, use `file.size` in Kibana's Security -> Alerts, Analytics -> Discover doesn't have data on file.size.
+
 #### Elastic Common Schema (ECS)
 
 |Field|Description|KQL Examples|
