@@ -834,7 +834,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |destination.ip|`destination.ip: 23.194.192.66`|Looks for any logs originating to IP 23.194.192.66|
 |destination.port|`destination.port: 443`|Looks for any logs originating towards port 443|
 |dns.question.name|`dns.question.name: "www.youtube.com"`|Look for any DNS resolution towards www.youtube.com|
-|winlog.event_data.QueryName|`event.code: 22 and winlog.event_data.QueryName: *micro*`|Event ID 22 allows you to see the DNS resolution for URLs. Example is used to see for any typosquatting microsoft websites|
+|winlog.event_data.QueryName|`event.code: 22 and winlog.event_data.QueryName: *micro*`|Event ID 22 allows you to see the DNS resolution for URLs. Example is used to see for any typosquatting microsoft websites. Can also be useful to check where the attacker download their malicious files.|
 |dns.response_code|`dns.response_code: "NXDOMAIN"`|Looks for DNS traffic towards non existing domain names|
 |destination.geo.country_name|`destination.geo.country_name: "Canada"`|Looks for any outbound traffic toward Canada|
 
