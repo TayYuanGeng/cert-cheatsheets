@@ -808,7 +808,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 
 #### Common search fields
 
-|Field|Description|KQL Examples|
+|Field of Importance|KQL Examples|Important Info|
 |:---:|:---:|:---:|
 |@timestamp|@timestamp: 2023-01-26|Events that happened in 26th|
 ||@timestamp <= "2023-01-25"|Events that happened with a date less than or equal to 25th of Jan|
@@ -818,10 +818,11 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 
 #### Process Related Fields
 
-|Field|Description|KQL Examples|
+|Field of Importance|KQL Examples|Important Info|
 |:---:|:---:|:---:|
 |process.name|`event.category: process and process.name: powershell.exe`|Look for powershell.exe as a process|
 |process.command_line|`event.category: process and process.command_line.text:*whoami*`|Look for a commandline that has whoami on it|
+|Include column `winlog.event_data.CommandLine` to see what commands are executed|`winlog.event_data.ParentImage: "C:\Windows\System32\cmd.exe"`|Look for commands executed|
 |process.pid|`event.category: process and process.pid: 6360`|Look for process id: 6360|
 |process.parent.name|`event.category: process and process.parent.name: cmd.exe`|Looks for cmd.exe as a parent process|
 |process.parent.pid|`host.name: DESKTOP-* and event.category: process and process.command_line.text: powershell and process.parent.pid: 12620`|Looks for a process command line that has powershell and the parent process id is 12620 on a hostname that starts with DESKTOP|
