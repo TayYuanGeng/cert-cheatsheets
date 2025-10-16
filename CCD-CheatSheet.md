@@ -242,6 +242,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |File Creation/Deletion/Command Execution (e.g. whoami, ping)|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
 ||11 -> File created||
 ||23 -> File Deleted||
+||`file.name: *Zone.Identifier`|Useful to obtain files that have been downloaded. Zone.Identifier files are created after files are downloaded.|
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
 ||4104 -> Scriptblock logging (Logs PowerShell script code when being executed even if it is obfuscated)|Microsoft-Windows-PowerShell%4Operational.evtx has the same event id|
 ||4656 -> User tried to access an object||
