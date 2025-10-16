@@ -346,7 +346,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
-|Malicious DLL loaded into processes every time a specific app is loaded. Attackers attached malicious DLL to applications and persistence happens when user opens the application.|`Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLLs`|Registry Explorer/RegRipper|
+|Malicious DLL loaded into processes every time a specific app is loaded. Attackers attached malicious DLL to applications and persistence happens when user opens the application.|`Microsoft\Windows NT\CurrentVersion\Windows\AppInit_DLLs`<br>OR<br>`Microsoft-Windows-Sysmon%4Operational.evtx` Event ID 7 -> Logs when a DLL is loaded into a process|Registry Explorer/RegRipper|
 |**Initial logged in**|**`Software` hive**|**Registry Explorer/RegRipper**|
 |Userinit process is responsible for user initialization, such as running logon scripts and loading the user profile after a user logs on to the system. Malicious DLL is attached and will be loaded into processes every time the user logs on.|`Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`|Registry Explorer/RegRipper|
 |LastUsedUsername|`Microsoft\Windows NT\CurrentVersion\Winlogon`|Registry Explorer/RegRipper|
