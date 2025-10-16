@@ -1233,6 +1233,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |File Signatures for malware analysis|https://www.garykessler.net/library/file_sigs_GCK_latest.html|Used for reference on the list of file signatures. These file signatures appear at start of the hex dump.|
 |Pesec|https://pev.sourceforge.io/doc/manual/en_us/ch06s08.html|To check for security features in PE files|
 |Microsoft-Windows-Windows Defender%4Operational|https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus|For Windows Defender related events|
+|winlog.event_data.CommandLine|`tasklist` allow attacker to view what antivirus software is running on the target|For Antivirus related events|
 ||1116 OR 1015 -> The antimalware platform detected malware or other potentially unwanted software.||
 |MSSQL Logs|`<Drive Name>\MSSQL15.MSSQLSERVER\MSSQL\Log\ERRORLOG`|Useful to check which MSSQL account has attempted to logon, IP address initiating it and the configurations changed|
 |jd GUI|https://java-decompiler.github.io/|Good to view class files. To obtain class files, upload the jar file to jd GUI. Upon uploading, it will expand to multiple directories containing class files. E.g. `log4j-core-<version number>.jar`|
