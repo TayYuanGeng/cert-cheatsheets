@@ -642,6 +642,8 @@ python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <regist
 
 If unsure with the key, can just specify as "" and let volatility tell you the keys available. Useful to find persistence dropped with Run\RunOnce registry and their unique value.
 
+Useful to check for OS envrionment variable value through `\Device\HarddiskVolume1\WINDOWS\system32\config\software` offset (offset value (-o \[offset value\]) can be retrieved from hivelist) and -K `"ControlSet001\Control\Session Manager\Environment"`. The output will show `OS` key, and the key value will be env var value.
+
 plugin output:
 <ul>
   <li><b>1. Hive path:</b> hive path determine if the configuration stored is specific to a particular user or applies to the entire machine.</li>
