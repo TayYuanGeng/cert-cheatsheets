@@ -785,7 +785,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> malfind
 ```
 `svchost.exe` is a common process that is being used for code injection, run malfind to find out if it has the `MZ` signature through the hex dump `4d 5a`
 
-Can incorporate with `-D` to dump the process into a file for virustotal scan
+Can incorporate with `-D` to dump the process into a file for virustotal scan. Also, performing a strings analysis of the malware would be beneficial. Sometimes whitelisting of processes are done by adding their PE file within the process, attackers can abuse it by adding that PE file so that the malware is whitelisting and remain undetected.
 
 #### yarscan Plugin
 
