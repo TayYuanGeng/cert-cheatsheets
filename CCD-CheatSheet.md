@@ -811,6 +811,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |event.outcome|It indicates whether the event represents a successful or a failed outcome|event.outcome: success|
 |||event.outcome : failure|
 |client.bytes|Use this as the metric field (sum of bytes) and source IP as the rows for auditbeat-* index, to check how much bytes were received by the source IP||
+|host.name|Use auditbeat-* index to find elasticsearch node name||
 
 #### Common search fields
 
