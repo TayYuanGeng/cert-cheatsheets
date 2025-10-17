@@ -556,6 +556,7 @@ To detect the commands that attackers typed into cmd.exe,
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> consoles
 ```
+This plugin and cmdscan are great for finding passwords within the RAM
 
 #### cmdscan Plugin
 
