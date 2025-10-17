@@ -588,6 +588,14 @@ Mispelled DLL names are also another indicator.
 
 With that information, you can correlate it with malfind plugin by finding the base address of the injected DLL, it's hexdump would have a `MZ` signature (signifying PE file).
 
+#### iehistory Plugin
+
+To list the history of internet explorer (e.g. files downloaded), use this plugin.
+
+```bash
+python vol.py -f memory.dmp/vmss --profile=<profile> -g <offset> iehistory
+```
+
 ### Networking
 
 #### netscan Plugin
