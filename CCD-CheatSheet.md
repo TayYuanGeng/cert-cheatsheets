@@ -727,6 +727,8 @@ To dump the memory resident pages of a particular process with PID XXXX,
 python vol.py -f memory.dmp --profile=<profile> -g <offset> memdump -p XXXX --dump-dir=/<output-directory>
 ```
 
+Useful to dump stuff like outlook.exe process to get email address, documents, email contents etc.
+
 #### vaddump Plugin
 
 To extract the range of pages described by a VAD node,
