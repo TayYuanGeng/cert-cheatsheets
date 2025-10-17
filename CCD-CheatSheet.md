@@ -631,6 +631,10 @@ To detect the persistence techniques in Registry key, utilize the following plug
 ```bash
 python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <registry-key>
 ```
+OR
+```bash
+python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -Q <virtual offset from hivelist output> -K <registry-key>
+```
 
 plugin output:
 <ul>
