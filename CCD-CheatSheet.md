@@ -1175,6 +1175,7 @@ Here is the list of all the tools utilized during the completion of the Certific
 |Event log explorer|https://eventlogxp.com/|Used for Windows event log analysis.|
 |Full Event Log view|https://www.nirsoft.net/utils/full_event_log_view.html|Used to display a table that details all events from the event logs of Windows.|
 |Volatility|https://www.volatilityfoundation.org/<br> https://github.com/volatilityfoundation/volatility/wiki/Command-Reference/<br> https://wongkenny240.gitbook.io/computerforensics/memory-analysis/volatility/<br> https://blog.onfvp.com/post/volatility-cheatsheet/|Used for Memory Analysis.|
+||https://www.aldeid.com/wiki/Volatility|Good wiki for usage tips|
 |AbuseIPDB|https://www.abuseipdb.com/|Detect abusive activity of IP address.|
 |IPQuality Score|https://www.ipqualityscore.com/|checks for IP addresses reputation.|
 |Any.run|https://app.any.run/|Malware Sandbox.|
