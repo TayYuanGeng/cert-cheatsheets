@@ -785,6 +785,8 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> malfind
 ```
 `svchost.exe` is a common process that is being used for code injection, run malfind to find out if it has the `MZ` signature through the hex dump `4d 5a`
 
+Can incorporate with `-D` to dump the process into a file for virustotal scan
+
 #### yarscan Plugin
 
 To locate any sequence of bytes, or determine the malicious nature of a process with PID XXXX, provided we have included the rule (yara rule file) we created, 
