@@ -590,7 +590,7 @@ With that information, you can correlate it with malfind plugin by finding the b
 
 #### iehistory Plugin
 
-To list the history of internet explorer (e.g. files downloaded), use this plugin.
+To list the history of internet explorer (e.g. files downloaded), use this plugin. Can be useful to check where the malware was initially launched from.
 
 ```bash
 python vol.py -f memory.dmp/vmss --profile=<profile> -g <offset> iehistory
