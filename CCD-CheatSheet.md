@@ -640,6 +640,8 @@ To detect the persistence techniques in Registry key, utilize the following plug
 python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <registry-key>
 ```
 
+If unsure with the key, can just specify as "" and let volatility tell you the keys available
+
 plugin output:
 <ul>
   <li><b>1. Hive path:</b> hive path determine if the configuration stored is specific to a particular user or applies to the entire machine.</li>
