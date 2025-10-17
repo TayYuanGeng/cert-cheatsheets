@@ -356,6 +356,8 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 ## Windows Memory Forensics with Volatility
 
+### For commands related to volatility, use double quotes for parameters value ("...")
+
 ### Image Identification
 
 #### imageinfo Plugin
