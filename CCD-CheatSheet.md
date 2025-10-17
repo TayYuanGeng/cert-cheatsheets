@@ -688,6 +688,8 @@ To extract MFT entries in memory, utilize the following plugin,
 volatility -f <memory_dump> --profile=<profile> -g <offset> mftparser
 ```
 
+Great for finding out std create data timestamp for files.
+
 From the above output:
 <ol>
   <li>MFT Record Header</li>
