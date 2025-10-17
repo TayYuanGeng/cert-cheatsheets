@@ -810,6 +810,11 @@ To locate any sequence of bytes, or determine the malicious nature of a process 
 volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar -p XXXX
 ```
 
+#### Misc
+
+- Check for `PortProxy` to check for the port forward rule to redirect traffic from public port to admin portal port.
+- PID responsible for initial exploit can be found usually in pstree plugin, those that has alot of child powershell OR cmd processes.
+
 ---
 ---
 
