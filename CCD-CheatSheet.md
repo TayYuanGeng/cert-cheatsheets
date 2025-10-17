@@ -640,7 +640,7 @@ To detect the persistence techniques in Registry key, utilize the following plug
 python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <registry-key>
 ```
 
-If unsure with the key, can just specify as "" and let volatility tell you the keys available
+If unsure with the key, can just specify as "" and let volatility tell you the keys available. Useful to find persistence dropped with Run\RunOnce registry and their unique value.
 
 plugin output:
 <ul>
