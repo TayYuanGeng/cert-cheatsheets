@@ -795,6 +795,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 - For file size filter, use `file.size` in Kibana's Security -> Alerts, Analytics -> Discover doesn't have data on file.size.
 - If cannot find any data, try using Kibana's Security -> Alerts
 - Use Security -> Hosts then filter to certain process then press on events. There will be a square cube at each record, use it to see how a e.g. malicious executable call the processes, dll, registry keys, file changes etc. via a chained map
+- To view total fields available in an index, goto Stack Management -> Data Views -> index name (e.g. auditbeat-*)
 
 #### Elastic Common Schema (ECS)
 
