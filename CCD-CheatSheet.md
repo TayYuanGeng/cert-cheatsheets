@@ -261,12 +261,12 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||NTUSER.dat||
 ||USRCLASS.dat||
 |Accessed Local/Network share files, Startup folder, its path, metadata, timestamps, drive letter|LNK files|LECmd|
-||`C:\Users<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
-||`C:\Users<User>\Desktop`||
-||`C:\Users<User>\AppData\Roaming\Microsoft\Office\Recent\`||
+||`C:\Users\<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
+||`C:\Users\<User>\Desktop`||
+||`C:\Users\<User>\AppData\Roaming\Microsoft\Office\Recent\`||
 |Frequently accessed files|JumpLists|JumpLists Explorer|
-||`C:\Users<User>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations`||
-||`C:\Users<User>\AppData\Roaming\Microsoft\ Windows\Recent\CustomDestinations`||
+||`C:\Users\<User>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations`||
+||`C:\Users\<User>\AppData\Roaming\Microsoft\ Windows\Recent\CustomDestinations`||
 |Recover Deleted Files from Recycle Bin|`INFO2/$I`|RBCmd|
 
 #### Connected Devices
@@ -1043,7 +1043,7 @@ PECmd is useful to find out number of runtimes.
 Extract the LNK file(s) from `C:\Users\$USER$\AppData\Roaming\Microsoft\Windows\Recent` using FTK Imager,
 
 ```cmd
-LECmd.exe -f "C:\Users\user\AppData\Roaming\Microsoft\Windows\Recent\file.lnk"
+LECmd.exe -f "C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Recent\file.lnk"
 ```
 
 #### RBCmd
@@ -1056,10 +1056,10 @@ RBCmd.exe -f "path/to/file" --csv "<output-directory>" --csvf results.csv
 
 #### WxtCmd
 
-Analyze the Timeline database and parse it into a CSV file using WxtCmd. The file can be found at `C:\Users<user>\AppData\Local\ConnectedDevicesPlatform\<user>\ActivitiesCache.db`
+Analyze the Timeline database and parse it into a CSV file using WxtCmd. The file can be found at `C:\Users\<user>\AppData\Local\ConnectedDevicesPlatform\<user>\ActivitiesCache.db`
 
 ```cmd
-WxTCmd.exe -f "C:\Users<user>\AppData\Local\ConnectedDevicesPlatform\<user>\ActivitiesCache.db" --csv "C:\Users\<user>\Desktop" --csvf results.csv
+WxTCmd.exe -f "C:\Users\<user>\AppData\Local\ConnectedDevicesPlatform\<user>\ActivitiesCache.db" --csv "C:\Users\<user>\Desktop" --csvf results.csv
 ```
 
 #### Amcache Parser
