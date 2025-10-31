@@ -1169,6 +1169,8 @@ Best to include display of `process.command_line` column when filtering to `even
 ||15457 -> Configuration option '%ls' changed from %ld to %ld. Run the RECONFIGURE statement to install.|
 ||18455 -> Login succeeded for user '%.*ls'.%.*ls|
 ||18456 -> Login failed for user '%.*ls'.%.*ls|
+||15457 -> To check name of shell exploited|
+||15457 -> Shell configuration changes|
 ||For more info, goto https://learn.microsoft.com/en-us/sql/relational-databases/errors-events/database-engine-events-and-errors-18000-to-18999?view=sql-server-ver17|
 
 For KQL queries on MSSQL, use
