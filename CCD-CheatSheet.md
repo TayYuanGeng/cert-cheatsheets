@@ -992,7 +992,7 @@ Event id 5001 helps to check the exact time of disabling real-time monitoring.
 ### Executable usually used by attackers
 |Executable|
 |:---:|
-|bitsadmin (Deprecated, older version), certutil (newer version)|
+|bitsadmin (Deprecated, older version), certutil (newer version) and paired with -decode for encoded file|
 ---
 
 ## Network Threat Hunting
