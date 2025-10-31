@@ -1167,7 +1167,7 @@ Best to include display of `process.command_line` column when filtering to `even
 |Username, creation date ,login date, SID|SAM|Registry Explorer/RegRipper|
 |Login, logout, deletion, creation|Application.evtx|Event Log Explorer|
 ||15457 -> Configuration option '%ls' changed from %ld to %ld. Run the RECONFIGURE statement to install.|
-||18455 -> Login succeeded for user '%.*ls'.%.*ls|
+||18453/18454/18455 -> Login succeeded for user '%.*ls'.%.*ls|
 ||18456 -> Login failed for user '%.*ls'.%.*ls|
 ||15457 -> To check name of shell exploited|
 ||15457 -> Shell configuration changes|
