@@ -864,7 +864,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |process.name|`event.category: process and process.name: powershell.exe`|Look for powershell.exe as a process|
 |process.command_line|`event.category: process and process.command_line.text:*whoami*`|Look for a commandline that has whoami on it|
 |Include column `winlog.event_data.CommandLine` to see what commands are executed|`winlog.event_data.ParentImage: "C:\Windows\System32\cmd.exe"`|Look for commands executed|
-|winlog.event_data.Image to see what image is executed|`event.code : 1 and winlog.event_data.Image: *\\<first ip portion before the dot>*`|Look for malicious file in shared folder or network folder|
+|winlog.event_data.Image to see what image is executed|`event.code : 1 and winlog.event_data.Image: *\\<first ip portion before the dot>*`, change to event code 11 to see what files are dropped if the shared file is executed on the network|Look for malicious file in shared folder or network folder|
 |process.pid|`event.category: process and process.pid: 6360`|Look for process id: 6360|
 |process.parent.name|`event.category: process and process.parent.name: cmd.exe`|Looks for cmd.exe as a parent process|
 |process.parent.pid|`host.name: DESKTOP-* and event.category: process and process.command_line.text: powershell and process.parent.pid: 12620`|Looks for a process command line that has powershell and the parent process id is 12620 on a hostname that starts with DESKTOP|
