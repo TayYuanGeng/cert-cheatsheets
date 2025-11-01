@@ -225,7 +225,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||4634 -> Session terminated|
 ||4647 -> User initiated logoff [This is the most accurate if it asks for user logoff time]|
 ||4672 -> Special privilege logon|
-||4648 -> User run program as another user (Runas administrator)|
+||4648 -> User run program as another user (Runas administrator)|Good for tracking lateral movement from one device to another since you can see the subject (From) to target|
 ||4720/4726 -> Account creation/deletion|
 
 #### File Activities - What happened?
