@@ -920,7 +920,7 @@ Note that krbtgt service account WILL always be contacted for kerberos processes
 |20|WmiEventConsumer activity detected|
 |21|WmiEventConsumerToFilter activity detected|
 
-For WmiEventConsumer name, try filter event id 20 and add column in ELK: `winlog.event_data.Name`.
+For WmiEventConsumer name OR WMI Consumer Event, try filter event id 20 and add column in ELK: `winlog.event_data.Name`.
 
 ---
 
