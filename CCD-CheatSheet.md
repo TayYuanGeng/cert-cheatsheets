@@ -226,6 +226,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||4647 -> User initiated logoff [This is the most accurate if it asks for user logoff time]|
 ||4672 -> Special privilege logon|
 ||4648 -> User run program as another user (Runas administrator)|Good for tracking lateral movement from one device to another since you can see the subject (From) to target|
+||1 -> Check for powershell commands with WSMan|Good for tracking lateral movement, WSMan used to configure Windows Remote Management (WinRM) settings on a local computer, specifically, to add a trusted host to the WinRM client configuration.
 ||4720/4726 -> Account creation/deletion|
 
 #### File Activities - What happened?
