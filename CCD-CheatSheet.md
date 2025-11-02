@@ -849,7 +849,7 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 ||`"@<domain name>" and "Successful login"`|To look for ip address that logged into the email|
 ||`event.code : 15`|15 -> File create stream hash, able to track for chrome or firefox downloads especially if downloaded via a webmail client and can get file hash|
 ||`event.code : 11`|11 -> May reveal lnk files, sometimes it is not shown that it is executed via event 1, so try use surrounding documents to see whether this lnk is executed and further actions/processes were created (e.g. recon command, new files etc)|
-||`event.code : 1`|May reveal user execution, where winlog.event_data.ParentImage: explorer.exe, meaning that the victim had manually executed the file|
+||`event.code : 1`|May reveal user execution, where winlog.event_data.ParentImage: C:\Windows\explorer.exe, meaning that the victim had manually executed the file|
 |To look for in message: `Object Name:		\REGISTRY\MACHINE\SOFTWARE\Classes\CLSID\<COM Class value>`|`event.code : 1 and agent.name : <victim machine name> and winlog.event_data.CommandLine : *` then add the `winlog.event_data.ParentCommandLine` column to look for `C:\Windows\system32\DllHost.exe /Processid:<COM Class Value>`|May reveal priviledged COM interface or component or class and look something like {D2E7041B-2927-42FB-8E9F-7CE93B6DC937} where it is the CLSID (Class Identifier) that uniquely identifies a specific COM (Component Object Model) class|
 
 #### Common search fields
