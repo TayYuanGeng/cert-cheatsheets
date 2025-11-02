@@ -243,7 +243,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
 |:---:|:---:|:---:|
 |File Creation/Deletion/Command Execution (e.g. whoami, ping)|`Microsoft-Windows-Sysmon%4Operational.evtx`|Event Log Explorer|
-||11 -> File created||
+||11 -> File created or File relocated||
 ||23 -> File Deleted||
 ||`file.name: *Zone.Identifier`|Useful to obtain files that have been downloaded. Zone.Identifier files are created after files are downloaded.|
 |Failed/Succesful object access|Security.evtx|Event Log Explorer|
