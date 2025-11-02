@@ -845,7 +845,8 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 |host.name|Use auditbeat-* index to find elasticsearch node name||
 ||`message: "Anonymous TLS connection established"` OR `message: *smtp*` to find related domains and ips|To track connection made to suspicious domain known for malicious email activities and the IP address the domain involved in this connection|
 ||`event.code : 15`|15 -> File create stream hash, able to track for chrome or firefox downloads especially if downloaded via a webmail client and can get file hash|
-||`event.code : 11`|11 -> May reveal lnk files, sometimes it is not shown that it is executed via event 1, so try use surrounding documents to see whether this lnk is executed and further actions/processes were created (e.g. recon command, new files etc)
+||`event.code : 11`|11 -> May reveal lnk files, sometimes it is not shown that it is executed via event 1, so try use surrounding documents to see whether this lnk is executed and further actions/processes were created (e.g. recon command, new files etc)|
+||`event.code : 1`|May reveal user execution, where winlog.event_data.ParentImage: explorer.exe, meaning that the victim had manually executed the file|
 
 #### Common search fields
 
