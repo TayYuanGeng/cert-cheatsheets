@@ -964,6 +964,8 @@ event.code: 10 and winlog.event_data.TargetImage: *lsass.exe*
 For sysmon event log, filter for event id 10 OR "Credential Dumping", usually attackers will use rundll32.exe to call lsass.exe.
 Or `HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\WDigest /v UseLogonCredential /t REG_DWORD /d 1 /f` that enables plaintext credential storage, aiding in credential theft
 
+rundll32.exe can also be abused using `rundll32.exe <dllname and location> <dllfunction>`
+
 ### Detect new SID group (e.g. for mail capabilites)
 
 Indicates a user created a security-enabled global group, output will provide SID, group name, group domain, privileges etc.
