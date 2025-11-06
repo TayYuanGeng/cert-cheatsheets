@@ -268,7 +268,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`C:\Users\<User>\Desktop`||
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\Office\Recent\`||
 ||`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`||
-||`C:\Users\[USERNAME]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+||`C:\Users\[USERNAME]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`||
 |Frequently accessed files|JumpLists|JumpLists Explorer|
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations`||
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\ Windows\Recent\CustomDestinations`||
