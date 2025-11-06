@@ -263,10 +263,12 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Accessed Local/Network folders|ShellBags|ShellBags Explorer|
 ||NTUSER.dat||
 ||USRCLASS.dat||
-|Accessed Local/Network share files, Startup folder, its path, metadata, timestamps, drive letter|LNK files|LECmd|
+|Accessed Local/Network share files, Startup folder (For Persistence), its path, metadata, timestamps, drive letter|LNK files|LECmd|
 ||`C:\Users\<User>\Appdata\Roaming\Microsoft\Windows\Recent`||
 ||`C:\Users\<User>\Desktop`||
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\Office\Recent\`||
+||`C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup`||
+||`C:\Users\[USERNAME]\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 |Frequently accessed files|JumpLists|JumpLists Explorer|
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations`||
 ||`C:\Users\<User>\AppData\Roaming\Microsoft\ Windows\Recent\CustomDestinations`||
