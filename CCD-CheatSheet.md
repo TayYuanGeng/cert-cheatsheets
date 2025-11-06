@@ -307,7 +307,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`||
 ||`WINDOWS\system32\config\software\Microsoft\Windows NT\CurrentVersion\Winlogon\Userinit`|Above mentioned tool OR volatility `printkey` plugin|
 |Frequently run programs, last time, number of execution|UserAssist|UserAssist by Didier Steven|
-||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist` (Registry keys ending with EA is executable files and 9F is shortcuts. Clicking onto either of those keys will show the user frequency of running various executables/shortcuts, last run time etc. Focus Time values are in milliseconds, this time is determined based on how long the user is active on that process)||
+||`NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Explorer\UserAssist` (Registry keys ending with EA is executable files and 9F is shortcuts. Clicking onto either of those keys will show the user frequency of running various executables/shortcuts, last run time etc. Focus Time values are in milliseconds, this time is determined based on how long the user is active on that process)|Good for finding exact time the user run the malicious file in windows explorer interface|
 |Run of older applications on newer system|`SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatCache\AppCompatCache` (Only able to view applications details with compatibility mode (properties) turned on.)|ShimCache Parser|
 |Files path, md5 & sha1 hash|`Amcache.hve`|Amcache Parser|
 |Background applications|`BAM & DAM`|Registry Explorer/RegRipper|
