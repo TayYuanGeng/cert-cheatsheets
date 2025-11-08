@@ -820,6 +820,19 @@ volatility -f <memory_dump> --profile=<profile> -g <offset> yarascan -y rule.yar
 - Check for `PortProxy` to check for the port forward rule to redirect traffic from public port to admin portal port.
 - PID responsible for initial exploit can be found usually in pstree plugin, those that has alot of child powershell OR cmd processes.
 
+#### MemProcFS
+```bash
+memprocfs.exe -f <file.dmp> -forensic 1
+```
+Great to get physical files to explore within
+|**What To Look For**|**Where To Find It**|
+|:---:|:---:|
+|To look for the serial number of the inserted USB device|`M:\py\reg\usb\usb_storage.txt`|
+|To look for URL user visited|`M:\forensic\web\web.txt`|
+|Use timeline_all.txt to look at all the timeline files withint timeline dir|`M:\forensic\timeline\timeline_all.txt`|
+|To look for file downloaded time|`M:\forensic\timeline\timeline_ntfs.txt`|
+|To look for all dll invoked within that process id|`M:\pid\<pid value>\modules`|
+
 ---
 ---
 
