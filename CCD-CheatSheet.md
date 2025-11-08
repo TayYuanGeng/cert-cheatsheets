@@ -827,7 +827,7 @@ memprocfs.exe -f <file.dmp> -forensic 1
 Great to get physical files to explore within
 |**What To Look For**|**Where To Find It**|
 |:---:|:---:|
-|To look for the serial number of the inserted USB device|`M:\py\reg\usb\usb_storage.txt`|
+|To look for the serial number of the inserted USB device, when it first and last inserted|`M:\py\reg\usb\usb_storage.txt`|
 |To look for URL user visited|`M:\forensic\web\web.txt`|
 |Use timeline_all.txt to look at all the timeline files withint timeline dir|`M:\forensic\timeline\timeline_all.txt`|
 |To look for file downloaded time|`M:\forensic\timeline\timeline_ntfs.txt`|
