@@ -224,7 +224,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||4625 -> failed logon event|
 ||4634 -> Session terminated|
 ||4647 -> User initiated logoff [This is the most accurate if it asks for user logoff time]|
-||4672 -> Special privilege logon, can list the privileges assigned to the user, if can't find 4672 event id then check in `C:\Windows\security\logs\scesrv.log`. `secedit.exe` is often used to assign privileges|
+||4672 -> Special privilege logon, can list the privileges assigned to the user, if can't find 4672 event id then check in `C:\Windows\security\logs\scesrv.log`. `secedit.exe` is often used to assign privileges. When utilising secedit.exe, it will generate `secpol.inf` to export the configurations for attacker to make assign privileges and upon importing back, it generates a `secpol.sdb` to track the applied configuration.|
 ||4648 -> User run program as another user (Runas administrator)|Good for tracking lateral movement from one device to another since you can see the subject (From) to target|
 ||1 -> Check for powershell commands with WSMan|Good for tracking lateral movement, WSMan used to configure Windows Remote Management (WinRM) settings on a local computer, specifically, to add a trusted host to the WinRM client configuration.
 ||4720/4726 -> Account creation/deletion|
