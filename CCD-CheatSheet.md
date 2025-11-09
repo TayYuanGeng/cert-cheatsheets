@@ -1191,7 +1191,7 @@ The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, re
 Best to include display of `process.command_line` column when filtering to `event.code: 1`
 
 Event ID 4672 can be used for special privilege discovery and to check for any LOLBin exploitation available.
-`SeTakeOwnershipPrivilege` is particularly useful for LOLBin, it exploits leigitimate utilities such as takeown.exe, icacls.exe, cacls.exe and setacl.exe. For disk forensics, check for prefetch files to see LOLBin is used. Windows security mechanisms and typically owned by TrustedInstaller OR NT SERVICE\TrustedInstaller, if its not owned by NT SERVICE\TrustedInstaller then it would mean that SeTakeOwnershipPrivilege is used to change ownership.
+`SeTakeOwnershipPrivilege` is particularly useful for LOLBin, it exploits leigitimate utilities such as **takeown.exe, icacls.exe, cacls.exe and setacl.exe**. For disk forensics, check for prefetch files to see LOLBin is used. Windows security mechanisms and typically owned by TrustedInstaller OR NT SERVICE\TrustedInstaller, if its not owned by NT SERVICE\TrustedInstaller then it would mean that SeTakeOwnershipPrivilege is used to change ownership. To track the changes, check the UsnJrnl generated from the NTFS Log Tracker, the Event Info should have the `Access_Right_Changed` flag.
 
 #### MSSQL
 
