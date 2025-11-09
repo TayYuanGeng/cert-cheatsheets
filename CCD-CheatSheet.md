@@ -916,7 +916,7 @@ Great to get physical files to explore within
 |:---:|:---:|:---:|
 |To confirm if its RDP, look for event id 261|`Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`|Event Log Explorer|
 |To confirm successful authentication to RDP, look for event if 1149, this may also reveal the source ip of suceeded authentication|`Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`||
-|To check if attacker enabled RDP, look for event id 1. Reg add command `reg add "hklm\system\currentcontrolset\control\terminal server" /f /v fDenyTSConnections /t REG_DWORD /d 0 1`|`Microsoft-Windows-Sysmon%4Operational.evtx`||
+|To check if attacker enabled RDP, look for event id 1. Reg add command `reg add "hklm\system\currentcontrolset\control\terminal server" /f /v fDenyTSConnections /t REG_DWORD /d 0 1`|`Microsoft-Windows-Sysmon%4Operational.evtx`|HKCU Terminal Server Client\Servers will show the IP address of the target host to which the attacker attempted lateral movement via RDP|
 
 #### Kerberos
 |What To Look For|Where To Find It|Investigation Tool|
