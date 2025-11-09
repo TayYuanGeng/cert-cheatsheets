@@ -336,7 +336,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |Client-side Applications|`SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall` `SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall` `Software\Microsoft\Windows\CurrentVersion\App Paths`|Registry Explorer/RegRipper|
 ||`C:\ProgramData\Microsoft\Windows\AppRepository\StateRepository-Machine.srd`|DB Browser for SQLite|
 ||`Application.evtx` look for event id 11707 for successful installations, or event id 1033 (for MSI-based installs)|Event Log Explorer|
-||`System.evtx` look for event id 7045 (A service was installed in the system), to further correlate, you may check in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<ServiceName>`|Event Log Explorer|
+||`System.evtx` look for event id 7045 (A service was installed in the system), to further correlate, you may check in `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\<ServiceName>`, attacker may use this for persistence|Event Log Explorer|
 
 #### Process Activities
 
