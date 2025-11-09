@@ -300,7 +300,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 ||**SYSTEM.evtx**: 7034 -> Service crashed||
 ||7035 -> start/stop requests||
 ||7036 -> service stoppped/started||
-||7045 -> New service was installed (Can be used to check for malicious services started)||
+||7045 -> New service was installed (Can be used to check for malicious services started for persistence)||
 |Autorun applications/Registry-based persistence|`SOFTWARE\Microsoft\Windows\CurrentVersion\Run`|Registry Explorer/RegRipper|
 ||`SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`||
 ||`SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run`||
