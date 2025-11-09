@@ -1193,6 +1193,8 @@ Best to include display of `process.command_line` column when filtering to `even
 Event ID 4672 can be used for special privilege discovery and to check for any LOLBin exploitation available.
 `SeTakeOwnershipPrivilege` is particularly useful for LOLBin, it exploits leigitimate utilities such as **takeown.exe, icacls.exe, cacls.exe and setacl.exe**. For disk forensics, check for prefetch files to see LOLBin is used. Windows security mechanisms and typically owned by TrustedInstaller OR NT SERVICE\TrustedInstaller, if its not owned by NT SERVICE\TrustedInstaller then it would mean that SeTakeOwnershipPrivilege is used to change ownership. To track the changes, check the UsnJrnl generated from the NTFS Log Tracker, the Event Info should have the `Access_Right_Changed` flag.
 
+*Best is to use MFTECmd to extract the $J file and filter the **Update Reasons** to **SecurityChange** and **Extension** to **exe** then filter to the timestamp around the incident time
+
 #### MSSQL
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
