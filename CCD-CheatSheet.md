@@ -1051,7 +1051,7 @@ agent.type: "packetbeat" and type: dns AND not dns.response_code: "NOERROR"
 
 #### MFTECmd
 
-Extract the `$MFT` file from the `C:\$MFT` directory, contains file size, good to track attacker replace file
+Extract the `$MFT` file from the `C:\$MFT` directory, contains file size, good to track attacker replace file with the same file size
 
 ```cmd
 MFTECmd.exe -f "/path/to/$MFT" --csv "<output-directory>" --csvf results.csv
