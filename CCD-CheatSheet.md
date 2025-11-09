@@ -1190,6 +1190,9 @@ event.code : "1" and process.command_line : */node* and process.command_line : *
 The result should show WMIC.exe and cmd.exe BUT WMIC.exe uses it as a LOLBin, refer [here](https://lolbas-project.github.io/#wmi)
 Best to include display of `process.command_line` column when filtering to `event.code: 1`
 
+Event ID 4672 can be used for special privilege discovery and to check for any LOLBin exploitation available.
+`SeTakeOwnershipPrivilege` is particularly useful for LOLBin, it exploits leigitimate utilities such as takeown.exe, icacls.exe, cacls.exe and setacl.exe
+
 #### MSSQL
 
 |**What To Look For**|**Where To Find It**|**Investigation Tool**|
