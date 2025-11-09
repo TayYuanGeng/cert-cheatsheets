@@ -937,6 +937,8 @@ Note that krbtgt service account WILL always be contacted for kerberos processes
 
 For WmiEventConsumer name OR WMI Consumer Event, try filter event id 20 and add column in ELK: `winlog.event_data.Name`.
 
+For windows event log, check for `$sysTask.Properties.Add('<Property Name>', $encodedCommand)` and `([wmiclass] '<Class Name>').Properties` scriptblocks from Microsoft-Windows-PowerShell%4Operational where `<Property Name>` is the WMI property name and `<Class Name>` is the WMI class, `$encodedCommand` is used to hide the malicious command within the WMI class.
+
 ---
 
 ## Endpoint Threat Hunting
