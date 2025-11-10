@@ -931,9 +931,10 @@ Note that krbtgt service account WILL always be contacted for kerberos processes
 #### WMIC related event IDs
 |Sysmon Event ID|Description|
 |:---:|:---:|
-|19|WmiEventFilter activity detected|
-|20|WmiEventConsumer activity detected|
-|21|WmiEventConsumerToFilter activity detected|
+|19|WmiEventFilter activity detected, to find compromised user account used to create the malicious event filter|
+|20|WmiEventConsumer activity detected, |
+|21|WmiEventConsumerToFilter activity detected, to find SID associated with the WMI binding event|
+Each WMI event subscription has a filter and consumer, the filter is the condition to be met before triggering the consumer event. Event 21 binds both filter and consumer event.
 
 For WmiEventConsumer name OR WMI Consumer Event, try filter event id 20 and add column in ELK: `winlog.event_data.Name`.
 
