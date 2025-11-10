@@ -956,7 +956,7 @@ OR
 technique_id=T1053,technique_name=Scheduled Task
 ```
 
-Scheduled Tasks will drop either <filename>.job OR <filename>.xml file in `C:\Windows\Tasks` OR `C:\Windows\System32\Tasks` respectively. Use dumpfiles plugin on the .job or .xml file after filescan plugin (to identify the jobs within tasks folder) to show what file is scheduled.
+Scheduled Tasks will drop either <filename>.job OR <filename>.xml file in `C:\Windows\Tasks` OR `C:\Windows\System32\Tasks` respectively. Use dumpfiles plugin on the .job or .xml file after filescan plugin (to identify the jobs within tasks folder) to show what file is scheduled. For task path, go into the file and find for the `<URI></URI>`, content within it is the task path.
 
 ### Detect PsExec Activity in the Network,
 
