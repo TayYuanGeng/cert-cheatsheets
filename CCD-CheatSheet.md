@@ -888,7 +888,7 @@ Great to get physical files to explore within
 |process.pid|`event.category: process and process.pid: 6360`|Look for process id: 6360|
 |process.parent.name|`event.category: process and process.parent.name: cmd.exe`|Looks for cmd.exe as a parent process|
 |process.parent.pid|`host.name: DESKTOP-* and event.category: process and process.command_line.text: powershell and process.parent.pid: 12620`|Looks for a process command line that has powershell and the parent process id is 12620 on a hostname that starts with DESKTOP|
-|event.code : 8|`event.code : 8 and host.name : <hostname>`|8 -> For tracking process injection and the start address, can use event 10 to track processaccess events|
+|event.code : 8|`event.code : 8 and host.name : <hostname>`|8 -> For tracking process injection/spoofing and the start address, can use event 10 to track processaccess events|
 
 #### Network related fields
 
