@@ -358,7 +358,7 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 |LastUsedUsername|`Microsoft\Windows NT\CurrentVersion\Winlogon`|Registry Explorer/RegRipper|
 |Shell registry key in the Windows operating system specifies the shell program run when a user logs in. Attacker maintain persistence by attaching malicious executable and runs alongside the default shell.|`Microsoft\Windows NT\CurrentVersion\Winlogon\Shell`|Registry Explorer/RegRipper|
 
-For disabling System Restore, look for event id **8195** in **Application.evtx**. Attackers can also delete VSS copy via powershell/cmd commands.
+For disabling System Restore, look for event id **8195** in **Application.evtx** OR via **SOFTWARE** registry hive "SystemRestore" key. Attackers can also delete VSS copy via powershell/cmd commands.
 
 ---
 
