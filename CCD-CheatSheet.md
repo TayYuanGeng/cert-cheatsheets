@@ -1003,6 +1003,7 @@ event.code: 4728
 |Example|Classification|
 |:---:|:---:|
 |Leveraged existing, long-running processes to alter the process hierarchy of new processes and to execute malicious code in the context of these long-running processes.|T1055.002|
+|Adversaries may rename legitimate / system utilities to try to evade/bypass security mechanisms concerning the usage of those utilities. This can also be attacker renaming their malware to legitimate / system utilities and placing them in System32 directory.|T1036.003|
 
 ### Attackers like to search for specific services/strings
 |Command|Example|
