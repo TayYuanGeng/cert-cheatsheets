@@ -433,7 +433,7 @@ pscan plugin to discover anomalies:
   <li>Persistence Processes</li>
   <ul>
     <li>schtasks.exe</li>
-    <li>reg.exe (Adding registry keys)</li>
+    <li>reg.exe (Adding into Run registry keys)</li>
     <li>sc.exe, net.exe (Adding a malicious service with autostart)</li>
   </ul>
 </ol>
