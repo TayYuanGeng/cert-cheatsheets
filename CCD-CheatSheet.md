@@ -925,7 +925,7 @@ Great to get physical files to explore within
 |:---:|:---:|:---:|
 |To check the Kerberos Encryption type, check against Elastic SIEM (ELK) and [documentation](https://system32.eventsentry.com/codes/field/Kerberos%20Encryption%20Types) for the encryption protocol|Filter based on `winlog.event_data.TicketEncryptionType`|ELK|
 |4768|A Kerberos authentication ticket (TGT) was requested|ELK|
-|4769|A Kerberos service ticket was requested|ELK|
+|4769|A Kerberos service ticket was requested, can be used to view ticket encryption type|ELK|
 |4771|Kerberos pre-authentication failed|ELK|
 
 Note that krbtgt service account WILL always be contacted for kerberos processes.
