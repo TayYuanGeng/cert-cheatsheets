@@ -1026,7 +1026,7 @@ Attackers often do this to cover their tracks by removing real-time monitoring, 
 - wevtutil cl <event log name> (e.g. `wevtutil cl System`) wipes clean the event log.
 - `sc stop WinDefend` sc is commonly used to manage and communicate with the services.
 
-Event id 5001 helps to check the exact time of disabling real-time monitoring.
+Event id 5001 OR sysmon 13 helps to check the exact time of disabling real-time monitoring.
 
 ### Executable usually used by attackers
 |Executable|
