@@ -649,7 +649,7 @@ To detect the persistence techniques in Registry key, utilize the following plug
 python vol.py -f memory.dmp --profile=<profile> -g <offset> printkey -K <registry-key>
 ```
 
-If unsure with the key, can just specify as "" and let volatility tell you the keys available. Useful to find persistence dropped with Run\RunOnce registry and their unique value.
+If unsure with the key, can just specify as "" and let volatility tell you the keys available. Useful to find persistence dropped with Run\RunOnce registry and their unique value. Value after the Run\RunOnce is the service name.
 
 Useful to check for OS envrionment variable value through `\Device\HarddiskVolume1\WINDOWS\system32\config\software` offset (offset value (-o \[offset value\]) can be retrieved from hivelist) and -K `"ControlSet001\Control\Session Manager\Environment"`. The output will show `OS` key, and the key value will be env var value.
 
