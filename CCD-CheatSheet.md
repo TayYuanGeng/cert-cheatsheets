@@ -361,6 +361,8 @@ By default, Windows Event Logs are stored at '`C:\Windows\system32\winevt\logs`
 
 For disabling System Restore, look for event id **8195** in **Application.evtx** OR via **SOFTWARE** registry hive "SystemRestore" key. Attackers can also delete VSS copy via powershell/cmd commands.
 
+Use ProcMon to perform dynamic analysis on the malware file to check which C2 server it is communicating to.
+
 ---
 
 ## Windows Memory Forensics with Volatility
